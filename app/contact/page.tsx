@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact ClinRAG — Newsletter, Questions, and Sponsorship",
+  description: "Subscribe to the ClinRAG newsletter, contact the editorial team, or inquire about sponsorship opportunities.",
+  alternates: {
+    canonical: "https://www.clinrag.com/contact",
+  },
+};
 
 export default function Contact() {
   return (
