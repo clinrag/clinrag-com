@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.prose-clinical h2 {
+  @apply text-2xl font-bold text-gray-900 mt-10 mb-4;
+}
+
+.prose-clinical h3 {
+  @apply text-xl font-semibold text-gray-800 mt-8 mb-3;
+}
+
+.prose-clinical p {
+  @apply text-gray-600 leading-relaxed mb-4;
+}
+
+.prose-clinical ul {
+  @apply list-disc list-inside text-gray-600 space-y-2 mb-4;
+}
+
+.prose-clinical ol {
+  @apply list-decimal list-inside text-gray-600 space-y-2 mb-4;
+}
+
+.prose-clinical strong {
+  @apply text-gray-800;
+}
+
+.prose-clinical blockquote {
+  @apply border-l-4 border-teal-500 pl-4 italic text-gray-500 my-4;
+}
+
+.prose-clinical code {
+  @apply bg-gray-100 text-teal-700 px-1.5 py-0.5 rounded text-sm;
+}
+
+.prose-clinical pre {
+  @apply bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto my-4;
+}
+
+.prose-clinical pre code {
+  @apply bg-transparent text-green-400;
+}
+
+.prose-clinical a {
+  @apply text-teal-600 hover:text-teal-700 underline;
+}
+
+.prose-clinical table {
+  @apply w-full border-collapse my-4;
+}
+
+.prose-clinical th,
+.prose-clinical td {
+  @apply border border-gray-200 px-4 py-2 text-left;
+}
+
+.prose-clinical th {
+  @apply bg-gray-50 font-semibold;
+}
