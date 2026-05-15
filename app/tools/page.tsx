@@ -37,17 +37,17 @@ const tools = [
     name: "OpenEvidence",
     href: "/tools/openevidence-overview",
     tag: "SaaS",
-    description: "OpenEvidence is an AI-powered clinical decision support platform that uses RAG to answer medical questions with citations to peer-reviewed medical evidence.",
-    features: ["Evidence-based answers", "Citation to medical literature", "Clinical decision support", "Peer-reviewed sources"],
+    description: "OpenEvidence is an AI-powered medical information platform that uses RAG to answer clinical questions with citations to peer-reviewed medical evidence.",
+    features: ["Evidence-grounded answers", "Citation to medical literature", "Clinical information retrieval", "Peer-reviewed sources"],
     healthcare_use: "Clinicians can ask clinical questions and receive answers backed by current medical literature with citations.",
   },
   {
     name: "Glass Health",
     href: "/tools/glass-health-overview",
     tag: "SaaS",
-    description: "Glass Health provides AI-powered clinical documentation and decision support tools, leveraging RAG to ground recommendations in current clinical guidelines.",
-    features: ["AI clinical notes", "Differential diagnosis", "Treatment recommendations", "Guideline-grounded responses"],
-    healthcare_use: "Streamline clinical documentation while ensuring treatment recommendations are grounded in evidence.",
+    description: "Glass Health provides AI-assisted clinical documentation and information support tools, leveraging RAG to ground outputs in current clinical guidelines.",
+    features: ["AI clinical notes", "Clinical reasoning support", "Guideline-informed workflow support", "Guideline-grounded responses"],
+    healthcare_use: "Streamline clinical documentation workflows while providing information resources aligned with evidence.",
   },
   {
     name: "ClinicalKey AI",
@@ -99,6 +99,12 @@ export default function ToolsDirectory() {
             </div>
           </Link>
         ))}
+      </div>
+
+      <div className="mt-12 p-6 bg-gray-50 rounded-xl border border-gray-200">
+        <p className="text-sm text-gray-500">
+          <strong>Disclaimer:</strong> Clinical decision support claims should be interpreted according to each vendor&apos;s documentation, regulatory status, and institutional governance requirements. This directory is for informational purposes only.
+        </p>
       </div>
     </div>
   );

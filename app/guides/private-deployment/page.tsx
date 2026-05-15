@@ -9,7 +9,7 @@ export default function PrivateDeployment() {
 
       <article className="prose-clinical">
         <h1>Private Medical RAG Deployment</h1>
-        <p className="text-xl text-gray-500 mb-8">How to deploy a HIPAA-compliant RAG system that keeps patient data on-premise.</p>
+        <p className="text-xl text-gray-500 mb-8">How to design a privacy-conscious medical RAG deployment for institution-controlled environments.</p>
 
         <h2>Why Private Deployment Matters</h2>
         <p>Healthcare data is subject to strict privacy regulations. In the US, HIPAA requires that Protected Health Information (PHI) be handled with specific safeguards. Using cloud LLM APIs (OpenAI, Anthropic) sends patient data to external servers, which may violate HIPAA unless a Business Associate Agreement (BAA) is in place.</p>
@@ -107,7 +107,8 @@ result = qa_chain.invoke({"query": clinical_question})`}</pre>
           <li>Log all queries for audit purposes</li>
         </ul>
 
-        <h3>4. HIPAA Compliance Checklist</h3>
+        <h3>Privacy and Compliance Readiness Checklist</h3>
+        <p>Items to consider when designing a privacy-aligned deployment. Consult your institution&apos;s legal and compliance team for specific requirements.</p>
         <ul>
           <li>[ ] All data encrypted at rest (AES-256)</li>
           <li>[ ] All data encrypted in transit (TLS 1.3)</li>
@@ -117,7 +118,7 @@ result = qa_chain.invoke({"query": clinical_question})`}</pre>
           <li>[ ] Data backup with encryption</li>
           <li>[ ] Disaster recovery plan documented</li>
           <li>[ ] Risk analysis completed</li>
-          <li>[ ] Business associate agreements with all vendors</li>
+          <li>[ ] Vendor agreements reviewed for privacy alignment</li>
         </ul>
 
         <h2>Performance Considerations</h2>

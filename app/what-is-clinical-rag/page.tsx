@@ -39,10 +39,10 @@ export default function WhatIsClinicalRAG() {
         <p>Clinical RAG systems can be scoped to specific specialties — cardiology, oncology, emergency medicine — retrieving only from relevant sources.</p>
 
         <h3>4. Reduced Hallucination Risk</h3>
-        <p>By grounding responses in retrieved evidence, RAG dramatically reduces the chance of fabricated drug names, incorrect dosages, or non-existent treatment protocols.</p>
+        <p>By grounding responses in retrieved source documents, RAG can reduce — though not eliminate — the risk of unsupported or fabricated outputs. This helps minimize incorrect drug names, dosages, or treatment protocols that may otherwise be generated.</p>
 
         <h3>5. Compliance and Privacy</h3>
-        <p>Unlike public LLM APIs, RAG systems can be deployed on-premise with full control over data flow — essential for HIPAA compliance.</p>
+        <p>Unlike public LLM APIs, RAG systems can be deployed on-premise with full control over data flow — important for privacy-conscious deployment and may support HIPAA-aligned workflows when combined with appropriate safeguards.</p>
 
         <h2>How Clinical RAG Works</h2>
 
