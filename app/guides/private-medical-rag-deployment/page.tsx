@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Private Medical RAG Deployment — Privacy-Conscious Design Guide",
   description: "How to design a privacy-conscious medical RAG deployment for institution-controlled environments, including component selection and security.",
   alternates: {
-    canonical: "https://www.clinrag.com/guides/private-deployment",
+    canonical: "https://www.clinrag.com/guides/private-medical-rag-deployment",
   },
 };
 
@@ -18,7 +18,7 @@ const articleJsonLd = {
   publisher: { "@type": "Organization", name: "ClinRAG" },
   datePublished: "2026-05-15",
   dateModified: "2026-05-15",
-  mainEntityOfPage: "https://www.clinrag.com/guides/private-deployment",
+  mainEntityOfPage: "https://www.clinrag.com/guides/private-medical-rag-deployment",
 };
 
 const breadcrumbJsonLd = {
@@ -27,7 +27,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
     { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Private Deployment", item: "https://www.clinrag.com/guides/private-deployment" },
+    { "@type": "ListItem", position: 3, name: "Private Deployment", item: "https://www.clinrag.com/guides/private-medical-rag-deployment" },
   ],
 };
 
@@ -182,8 +182,8 @@ result = qa_chain.invoke({"query": clinical_question})`}</pre>
 
         <h2>Related Resources</h2>
         <ul>
-          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
-          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/reduce-hallucinations-medical-ai">How to Reduce Hallucinations in Medical AI</Link></li>
           <li><Link href="/tools/langchain-medical-rag">LangChain for Medical RAG</Link></li>
           <li><Link href="/tools/ragflow-healthcare">RAGFlow for Healthcare</Link></li>
           <li><Link href="/templates">Clinical RAG Templates</Link></li>

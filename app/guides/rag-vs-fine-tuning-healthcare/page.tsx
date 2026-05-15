@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "RAG vs Fine-tuning in Healthcare — When to Use Each Approach",
   description: "Compare retrieval-augmented generation with fine-tuning for medical AI applications. Learn when to use RAG, fine-tuning, or both.",
   alternates: {
-    canonical: "https://www.clinrag.com/guides/rag-vs-finetuning",
+    canonical: "https://www.clinrag.com/guides/rag-vs-fine-tuning-healthcare",
   },
 };
 
@@ -18,7 +18,7 @@ const articleJsonLd = {
   publisher: { "@type": "Organization", name: "ClinRAG" },
   datePublished: "2026-05-15",
   dateModified: "2026-05-15",
-  mainEntityOfPage: "https://www.clinrag.com/guides/rag-vs-finetuning",
+  mainEntityOfPage: "https://www.clinrag.com/guides/rag-vs-fine-tuning-healthcare",
 };
 
 const breadcrumbJsonLd = {
@@ -27,7 +27,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
     { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
-    { "@type": "ListItem", position: 3, name: "RAG vs Fine-tuning", item: "https://www.clinrag.com/guides/rag-vs-finetuning" },
+    { "@type": "ListItem", position: 3, name: "RAG vs Fine-tuning", item: "https://www.clinrag.com/guides/rag-vs-fine-tuning-healthcare" },
   ],
 };
 
@@ -118,8 +118,8 @@ export default function RagVsFinetuning() {
         <h2>Related Resources</h2>
         <ul>
           <li><Link href="/what-is-clinical-rag">What Is Clinical RAG?</Link></li>
-          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
-          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/reduce-hallucinations-medical-ai">How to Reduce Hallucinations in Medical AI</Link></li>
           <li><Link href="/tools">Clinical RAG Tools Directory</Link></li>
         </ul>
       </article>

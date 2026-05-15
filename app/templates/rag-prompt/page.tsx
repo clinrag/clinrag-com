@@ -119,7 +119,7 @@ Response:
           <li><strong>Structured output:</strong> Consistent format makes it easier for clinicians to review</li>
         </ul>
 
-        <p>See our <Link href="/guides/reduce-hallucinations">guide on reducing hallucinations</Link> for additional prompt techniques.</p>
+        <p>See our <Link href="/guides/reduce-hallucinations-medical-ai">guide on reducing hallucinations</Link> for additional prompt techniques.</p>
       </article>
     </div>
   );

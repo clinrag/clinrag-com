@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Clinical RAG Evaluation Checklist — Assess Safety, Accuracy, and Reliability",
   description: "A comprehensive checklist for evaluating retrieval quality, citation grounding, and safety risks in clinical RAG systems.",
   alternates: {
-    canonical: "https://www.clinrag.com/guides/evaluation-checklist",
+    canonical: "https://www.clinrag.com/guides/clinical-rag-evaluation-checklist",
   },
 };
 
@@ -18,7 +18,7 @@ const articleJsonLd = {
   publisher: { "@type": "Organization", name: "ClinRAG" },
   datePublished: "2026-05-15",
   dateModified: "2026-05-15",
-  mainEntityOfPage: "https://www.clinrag.com/guides/evaluation-checklist",
+  mainEntityOfPage: "https://www.clinrag.com/guides/clinical-rag-evaluation-checklist",
 };
 
 const breadcrumbJsonLd = {
@@ -27,7 +27,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
     { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Evaluation Checklist", item: "https://www.clinrag.com/guides/evaluation-checklist" },
+    { "@type": "ListItem", position: 3, name: "Evaluation Checklist", item: "https://www.clinrag.com/guides/clinical-rag-evaluation-checklist" },
   ],
 };
 
@@ -134,8 +134,8 @@ export default function EvaluationChecklist() {
 
         <h2>Related Resources</h2>
         <ul>
-          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
-          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/reduce-hallucinations-medical-ai">How to Reduce Hallucinations in Medical AI</Link></li>
           <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
           <li><Link href="/tools">Clinical RAG Tools Directory</Link></li>
         </ul>

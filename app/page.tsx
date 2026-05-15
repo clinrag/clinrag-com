@@ -16,15 +16,13 @@ const tools = [
   { name: "LangChain", desc: "Composable framework for LLM applications", href: "/tools/langchain-medical-rag", tag: "Framework" },
   { name: "OpenEvidence", desc: "AI clinical search with peer-reviewed evidence citations", href: "/tools/openevidence-overview", tag: "SaaS" },
   { name: "Glass Health", desc: "AI-powered clinical documentation assistant", href: "/tools/glass-health-overview", tag: "SaaS" },
-  { name: "ClinicalKey AI", desc: "Elsevier's AI clinical search and summarization", href: "/tools/clinicalkey-ai-overview", tag: "Enterprise" },
 ];
 
-const guides = [
-  { title: "How to Build a Medical RAG System", desc: "Step-by-step guide from data ingestion to deployment", href: "/guides/build-medical-rag" },
-  { title: "RAG vs Fine-tuning in Healthcare", desc: "When to use RAG vs fine-tuning for medical AI", href: "/guides/rag-vs-finetuning" },
-  { title: "Clinical RAG Evaluation Checklist", desc: "Comprehensive checklist for evaluating medical RAG systems", href: "/guides/evaluation-checklist" },
-  { title: "How to Reduce Hallucinations in Medical AI", desc: "Techniques to minimize fabricated outputs in clinical contexts", href: "/guides/reduce-hallucinations" },
-  { title: "Private Medical RAG Deployment", desc: "Design considerations for privacy-conscious clinical RAG deployments", href: "/guides/private-deployment" },
+const featuredGuides = [
+  { title: "How to Build a Medical RAG System", desc: "Step-by-step guide from data ingestion to deployment", href: "/guides/build-medical-rag-system" },
+  { title: "Clinical RAG vs Medical Chatbot", desc: "Understand the key differences and when to use each", href: "/guides/clinical-rag-vs-medical-chatbot" },
+  { title: "How to Reduce Hallucinations in Medical AI", desc: "Techniques to minimize fabricated outputs in clinical contexts", href: "/guides/reduce-hallucinations-medical-ai" },
+  { title: "Clinical RAG Safety Checklist", desc: "Safety checklist covering input validation, output safety, and monitoring", href: "/guides/clinical-rag-safety-checklist" },
 ];
 
 export default function Home() {
@@ -88,8 +86,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tools Directory */}
+      {/* Featured Guides */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">Featured Guides</h2>
+            <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+              Start with these essential guides for building safe, effective clinical RAG systems.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-teal-300 hover:shadow-lg transition-all group"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">{guide.title}</h3>
+                <p className="mt-2 text-gray-500 text-sm">{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/guides" className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium">
+              View All Guides →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Tools Directory */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900">Clinical RAG Tools Directory</h2>
@@ -121,30 +148,6 @@ export default function Home() {
             <Link href="/tools" className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium">
               View All Tools →
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Guides */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Guides & Tutorials</h2>
-            <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
-              Practical guides to help you build, evaluate, and deploy clinical RAG systems.
-            </p>
-          </div>
-          <div className="space-y-4 max-w-3xl mx-auto">
-            {guides.map((guide) => (
-              <Link
-                key={guide.href}
-                href={guide.href}
-                className="block bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-teal-200 hover:bg-teal-50 transition-all group"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">{guide.title}</h3>
-                <p className="mt-1 text-gray-500 text-sm">{guide.desc}</p>
-              </Link>
-            ))}
           </div>
         </div>
       </section>

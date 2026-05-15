@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "How to Reduce Hallucinations in Medical AI — 7 Proven Techniques",
   description: "Practical techniques to minimize hallucinations when building clinical RAG systems, from retrieval quality to self-consistency checks.",
   alternates: {
-    canonical: "https://www.clinrag.com/guides/reduce-hallucinations",
+    canonical: "https://www.clinrag.com/guides/reduce-hallucinations-medical-ai",
   },
 };
 
@@ -18,7 +18,7 @@ const articleJsonLd = {
   publisher: { "@type": "Organization", name: "ClinRAG" },
   datePublished: "2026-05-15",
   dateModified: "2026-05-15",
-  mainEntityOfPage: "https://www.clinrag.com/guides/reduce-hallucinations",
+  mainEntityOfPage: "https://www.clinrag.com/guides/reduce-hallucinations-medical-ai",
 };
 
 const breadcrumbJsonLd = {
@@ -27,7 +27,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
     { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Reduce Hallucinations", item: "https://www.clinrag.com/guides/reduce-hallucinations" },
+    { "@type": "ListItem", position: 3, name: "Reduce Hallucinations", item: "https://www.clinrag.com/guides/reduce-hallucinations-medical-ai" },
   ],
 };
 
@@ -140,15 +140,15 @@ Note: This does not constitute medical advice.`}</pre>
           <li><strong>Out-of-scope questions:</strong> Questions outside the knowledge base to test refusal behavior</li>
         </ul>
 
-        <p>See our <Link href="/guides/evaluation-checklist">Evaluation Checklist</Link> for a complete testing framework.</p>
+        <p>See our <Link href="/guides/clinical-rag-evaluation-checklist">Evaluation Checklist</Link> for a complete testing framework.</p>
 
         <hr className="my-8 border-gray-200" />
 
         <h2>Related Resources</h2>
         <ul>
           <li><Link href="/what-is-clinical-rag">What Is Clinical RAG?</Link></li>
-          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
-          <li><Link href="/guides/evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
+          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/clinical-rag-evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
           <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
         </ul>
       </article>

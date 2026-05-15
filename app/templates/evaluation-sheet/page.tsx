@@ -94,7 +94,7 @@ export default function EvaluationSheet() {
           <li>[ ] Mean response latency &lt; 5 seconds</li>
         </ul>
 
-        <p>See the full <Link href="/guides/evaluation-checklist">Clinical RAG Evaluation Checklist</Link> for additional criteria.</p>
+        <p>See the full <Link href="/guides/clinical-rag-evaluation-checklist">Clinical RAG Evaluation Checklist</Link> for additional criteria.</p>
       </article>
     </div>
   );

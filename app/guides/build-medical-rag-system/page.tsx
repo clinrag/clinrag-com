@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "How to Build a Medical RAG System — Step-by-Step Guide",
   description: "A practical guide to building a clinical RAG system: document ingestion, chunking, embedding, retrieval, LLM configuration, and evaluation.",
   alternates: {
-    canonical: "https://www.clinrag.com/guides/build-medical-rag",
+    canonical: "https://www.clinrag.com/guides/build-medical-rag-system",
   },
 };
 
@@ -18,7 +18,7 @@ const articleJsonLd = {
   publisher: { "@type": "Organization", name: "ClinRAG" },
   datePublished: "2026-05-15",
   dateModified: "2026-05-15",
-  mainEntityOfPage: "https://www.clinrag.com/guides/build-medical-rag",
+  mainEntityOfPage: "https://www.clinrag.com/guides/build-medical-rag-system",
 };
 
 const breadcrumbJsonLd = {
@@ -27,7 +27,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
     { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
-    { "@type": "ListItem", position: 3, name: "Build a Medical RAG System", item: "https://www.clinrag.com/guides/build-medical-rag" },
+    { "@type": "ListItem", position: 3, name: "Build a Medical RAG System", item: "https://www.clinrag.com/guides/build-medical-rag-system" },
   ],
 };
 
@@ -161,12 +161,12 @@ Answer:`}</pre>
           <li>Verify citations point to correct source documents</li>
           <li>Have clinicians review sample outputs</li>
         </ul>
-        <p>Use our <Link href="/guides/evaluation-checklist">Clinical RAG Evaluation Checklist</Link> for a systematic approach.</p>
+        <p>Use our <Link href="/guides/clinical-rag-evaluation-checklist">Clinical RAG Evaluation Checklist</Link> for a systematic approach.</p>
 
         <h2>Step 10: Deploy</h2>
         <p>For production deployment, consider:</p>
         <ul>
-          <li>Private deployment for privacy-conscious workflows (see <Link href="/guides/private-deployment">Private Deployment Guide</Link>)</li>
+          <li>Private deployment for privacy-conscious workflows (see <Link href="/guides/private-medical-rag-deployment">Private Deployment Guide</Link>)</li>
           <li>Monitoring and logging for clinical safety</li>
           <li>Regular knowledge base updates</li>
           <li>Performance optimization for clinical workflows</li>
@@ -177,9 +177,9 @@ Answer:`}</pre>
         <h2>Related Resources</h2>
         <ul>
           <li><Link href="/what-is-clinical-rag">What Is Clinical RAG?</Link></li>
-          <li><Link href="/guides/rag-vs-finetuning">RAG vs Fine-tuning in Healthcare</Link></li>
-          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
-          <li><Link href="/guides/evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
+          <li><Link href="/guides/rag-vs-fine-tuning-healthcare">RAG vs Fine-tuning in Healthcare</Link></li>
+          <li><Link href="/guides/reduce-hallucinations-medical-ai">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/guides/clinical-rag-evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
           <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
         </ul>
       </article>

@@ -143,7 +143,7 @@ export default function WhatIsClinicalRAG() {
         <p>Ready to explore the tools and build your own clinical RAG system?</p>
         <ul>
           <li>Browse the <Link href="/tools">Tools Directory</Link> for frameworks and platforms</li>
-          <li>Read <Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
+          <li>Read <Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
           <li>View the <Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
         </ul>
 
@@ -152,10 +152,10 @@ export default function WhatIsClinicalRAG() {
         <h2>Related Resources</h2>
         <ul>
           <li><Link href="/tools">Clinical RAG Tools Directory</Link></li>
-          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
-          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
-          <li><Link href="/guides/rag-vs-finetuning">RAG vs Fine-tuning in Healthcare</Link></li>
-          <li><Link href="/guides/private-deployment">Private Medical RAG Deployment</Link></li>
+          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/reduce-hallucinations-medical-ai">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/guides/rag-vs-fine-tuning-healthcare">RAG vs Fine-tuning in Healthcare</Link></li>
+          <li><Link href="/guides/private-medical-rag-deployment">Private Medical RAG Deployment</Link></li>
         </ul>
       </article>
     </div>
