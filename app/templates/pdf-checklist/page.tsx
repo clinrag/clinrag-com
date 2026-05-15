@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Medical PDF Preparation Checklist — Document Prep for Clinical RAG",
+  description: "Step-by-step checklist for preparing medical documents for RAG ingestion, including chunking, metadata tagging, and quality checks.",
+  alternates: {
+    canonical: "https://www.clinrag.com/templates/pdf-checklist",
+  },
+};
 
 export default function PDFChecklist() {
   return (

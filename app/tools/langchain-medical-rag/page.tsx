@@ -1,4 +1,32 @@
+import type { Metadata } from "next";
 import ToolPage from "@/components/ToolPage";
+
+export const metadata: Metadata = {
+  title: "LangChain for Medical RAG — Modular Clinical RAG Pipelines",
+  description: "Build custom medical RAG pipelines with LangChain's modular architecture: document loaders, splitters, retrievers, and LLMs.",
+  alternates: {
+    canonical: "https://www.clinrag.com/tools/langchain-medical-rag",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "LangChain for Medical RAG",
+  description: "Composable framework for building LLM applications in healthcare.",
+  url: "https://www.clinrag.com/tools/langchain-medical-rag",
+  applicationCategory: "HealthApplication",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.clinrag.com/tools" },
+    { "@type": "ListItem", position: 3, name: "LangChain for Medical RAG", item: "https://www.clinrag.com/tools/langchain-medical-rag" },
+  ],
+};
 
 export default function LangChainMedicalRAG() {
   return (
@@ -6,6 +34,7 @@ export default function LangChainMedicalRAG() {
       name="LangChain"
       tag="Framework"
       website="https://www.langchain.com"
+      jsonLd={{ "@graph": [articleJsonLd, breadcrumbJsonLd] }}
       overview="LangChain is the most widely adopted framework for building applications powered by LLMs. Its modular architecture allows developers to compose RAG pipelines from interchangeable components — document loaders, text splitters, embedding models, vector stores, retrievers, and LLMs — making it highly flexible for healthcare applications."
       features={[
         "Modular component architecture",

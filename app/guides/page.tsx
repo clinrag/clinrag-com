@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clinical RAG Guides — Build, Evaluate, and Deploy Medical RAG Systems",
+  description: "Practical guides for building medical RAG systems, evaluating retrieval quality, reducing hallucinations, and designing privacy-conscious deployments.",
+  alternates: {
+    canonical: "https://www.clinrag.com/guides",
+  },
+};
 
 const guides = [
   {

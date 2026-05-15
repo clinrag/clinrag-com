@@ -9,11 +9,18 @@ interface ToolPageProps {
   gettingStarted: string[];
   limitations?: string[];
   website?: string;
+  jsonLd?: object;
 }
 
-export default function ToolPage({ name, tag, overview, features, healthcareUse, gettingStarted, limitations, website }: ToolPageProps) {
+export default function ToolPage({ name, tag, overview, features, healthcareUse, gettingStarted, limitations, website, jsonLd }: ToolPageProps) {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
       <div className="mb-8">
         <Link href="/tools" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Tools Directory</Link>
       </div>

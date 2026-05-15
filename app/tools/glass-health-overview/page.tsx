@@ -1,8 +1,41 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Glass Health — AI-Assisted Clinical Documentation",
+  description: "Explore Glass Health's AI-powered clinical documentation and information support tools grounded in current clinical guidelines.",
+  alternates: {
+    canonical: "https://www.clinrag.com/tools/glass-health-overview",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Glass Health",
+  description: "AI-assisted clinical documentation and information support tools.",
+  url: "https://www.clinrag.com/tools/glass-health-overview",
+  applicationCategory: "HealthApplication",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.clinrag.com/tools" },
+    { "@type": "ListItem", position: 3, name: "Glass Health", item: "https://www.clinrag.com/tools/glass-health-overview" },
+  ],
+};
 
 export default function GlassHealthOverview() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@graph": [articleJsonLd, breadcrumbJsonLd] }) }}
+      />
+
       <div className="mb-8">
         <Link href="/tools" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Tools Directory</Link>
       </div>

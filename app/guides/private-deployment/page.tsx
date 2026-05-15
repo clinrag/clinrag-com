@@ -1,14 +1,61 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Private Medical RAG Deployment — Privacy-Conscious Design Guide",
+  description: "How to design a privacy-conscious medical RAG deployment for institution-controlled environments, including component selection and security.",
+  alternates: {
+    canonical: "https://www.clinrag.com/guides/private-deployment",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Private Medical RAG Deployment",
+  description: "How to design a privacy-conscious medical RAG deployment for institution-controlled environments.",
+  author: { "@type": "Organization", name: "ClinRAG" },
+  publisher: { "@type": "Organization", name: "ClinRAG" },
+  datePublished: "2026-05-15",
+  dateModified: "2026-05-15",
+  mainEntityOfPage: "https://www.clinrag.com/guides/private-deployment",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Private Deployment", item: "https://www.clinrag.com/guides/private-deployment" },
+  ],
+};
 
 export default function PrivateDeployment() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <div className="mb-8">
         <Link href="/guides" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Guides</Link>
       </div>
 
       <article className="prose-clinical">
         <h1>Private Medical RAG Deployment</h1>
+
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
+          <span><strong>Author:</strong> ClinRAG Editorial Team</span>
+          <span><strong>Last updated:</strong> May 15, 2026</span>
+          <span><strong>Reading time:</strong> 18 min</span>
+        </div>
+
         <p className="text-xl text-gray-500 mb-8">How to design a privacy-conscious medical RAG deployment for institution-controlled environments.</p>
 
         <h2>Why Private Deployment Matters</h2>
@@ -130,6 +177,17 @@ result = qa_chain.invoke({"query": clinical_question})`}</pre>
         </ul>
 
         <p>Need ready-to-use configurations? Check our <Link href="/templates">Templates</Link> section.</p>
+
+        <hr className="my-8 border-gray-200" />
+
+        <h2>Related Resources</h2>
+        <ul>
+          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/tools/langchain-medical-rag">LangChain for Medical RAG</Link></li>
+          <li><Link href="/tools/ragflow-healthcare">RAGFlow for Healthcare</Link></li>
+          <li><Link href="/templates">Clinical RAG Templates</Link></li>
+        </ul>
       </article>
     </div>
   );

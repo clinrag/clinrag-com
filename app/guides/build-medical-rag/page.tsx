@@ -1,20 +1,67 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "How to Build a Medical RAG System — Step-by-Step Guide",
+  description: "A practical guide to building a clinical RAG system: document ingestion, chunking, embedding, retrieval, LLM configuration, and evaluation.",
+  alternates: {
+    canonical: "https://www.clinrag.com/guides/build-medical-rag",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Build a Medical RAG System",
+  description: "A practical step-by-step guide from data ingestion to a working clinical RAG pipeline.",
+  author: { "@type": "Organization", name: "ClinRAG" },
+  publisher: { "@type": "Organization", name: "ClinRAG" },
+  datePublished: "2026-05-15",
+  dateModified: "2026-05-15",
+  mainEntityOfPage: "https://www.clinrag.com/guides/build-medical-rag",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Build a Medical RAG System", item: "https://www.clinrag.com/guides/build-medical-rag" },
+  ],
+};
 
 export default function BuildMedicalRAG() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <div className="mb-8">
         <Link href="/guides" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Guides</Link>
       </div>
 
       <article className="prose-clinical">
         <h1>How to Build a Medical RAG System</h1>
+
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
+          <span><strong>Author:</strong> ClinRAG Editorial Team</span>
+          <span><strong>Last updated:</strong> May 15, 2026</span>
+          <span><strong>Reading time:</strong> 15 min</span>
+        </div>
+
         <p className="text-xl text-gray-500 mb-8">A practical step-by-step guide from data ingestion to a working clinical RAG pipeline.</p>
 
         <h2>Step 1: Define Your Use Case</h2>
         <p>Before building anything, clearly define what your medical RAG system will do:</p>
         <ul>
-          <li><strong>Clinical decision support?</strong> Answering diagnostic and treatment questions</li>
+          <li><strong>Medical information retrieval?</strong> Answering clinical questions with citations</li>
           <li><strong>Literature review?</strong> Synthesizing research findings</li>
           <li><strong>Patient education?</strong> Generating lay-language explanations</li>
           <li><strong>Drug information?</strong> Checking interactions and contraindications</li>
@@ -27,7 +74,7 @@ export default function BuildMedicalRAG() {
           <li><strong>Clinical guidelines:</strong> NICE, AHA, ACC, IDSA guidelines</li>
           <li><strong>Drug databases:</strong> RxNorm, DrugBank, prescribing information</li>
           <li><strong>Medical literature:</strong> PubMed Central open-access articles</li>
-          <li><strong>Hospital protocols:</strong> Internal clinical pathways</li>
+          <li><strong>Institutional protocols:</strong> Internal clinical pathways</li>
         </ul>
         <p>Use tools like <Link href="/tools/ragflow-healthcare">RAGFlow</Link> for complex PDF parsing with tables and figures.</p>
 
@@ -44,7 +91,7 @@ export default function BuildMedicalRAG() {
         <p>The embedding model converts text into vectors for semantic search:</p>
         <ul>
           <li><strong>Cloud:</strong> OpenAI text-embedding-3-large, highest quality but data leaves your system</li>
-          <li><strong>Local:</strong> BGE-large, E5-large, or MedCPT (medical-specific) for HIPAA compliance</li>
+          <li><strong>Local:</strong> BGE-large, E5-large, or MedCPT (medical-specific) for privacy-conscious deployment</li>
           <li><strong>Medical-specific:</strong> Models fine-tuned on biomedical text perform better on clinical queries</li>
         </ul>
 
@@ -89,7 +136,7 @@ results = vectorstore.similarity_search("treatment for hypertension", k=5)`}</pr
 
         <h2>Step 8: Design Medical Prompts</h2>
         <p>Your prompt template should enforce evidence-based responses:</p>
-        <pre>{`You are a clinical decision support assistant. Answer the question
+        <pre>{`You are a clinical assistant. Answer the question
 using ONLY the provided medical context. If the context does not
 contain sufficient information, say so explicitly.
 
@@ -119,10 +166,21 @@ Answer:`}</pre>
         <h2>Step 10: Deploy</h2>
         <p>For production deployment, consider:</p>
         <ul>
-          <li>On-premise deployment for HIPAA compliance (see <Link href="/guides/private-deployment">Private Deployment Guide</Link>)</li>
+          <li>Private deployment for privacy-conscious workflows (see <Link href="/guides/private-deployment">Private Deployment Guide</Link>)</li>
           <li>Monitoring and logging for clinical safety</li>
           <li>Regular knowledge base updates</li>
           <li>Performance optimization for clinical workflows</li>
+        </ul>
+
+        <hr className="my-8 border-gray-200" />
+
+        <h2>Related Resources</h2>
+        <ul>
+          <li><Link href="/what-is-clinical-rag">What Is Clinical RAG?</Link></li>
+          <li><Link href="/guides/rag-vs-finetuning">RAG vs Fine-tuning in Healthcare</Link></li>
+          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/guides/evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
+          <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
         </ul>
       </article>
     </div>

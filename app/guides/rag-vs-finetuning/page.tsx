@@ -1,14 +1,61 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "RAG vs Fine-tuning in Healthcare — When to Use Each Approach",
+  description: "Compare retrieval-augmented generation with fine-tuning for medical AI applications. Learn when to use RAG, fine-tuning, or both.",
+  alternates: {
+    canonical: "https://www.clinrag.com/guides/rag-vs-finetuning",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "RAG vs Fine-tuning in Healthcare",
+  description: "Understanding when to use RAG vs fine-tuning for medical AI applications.",
+  author: { "@type": "Organization", name: "ClinRAG" },
+  publisher: { "@type": "Organization", name: "ClinRAG" },
+  datePublished: "2026-05-15",
+  dateModified: "2026-05-15",
+  mainEntityOfPage: "https://www.clinrag.com/guides/rag-vs-finetuning",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
+    { "@type": "ListItem", position: 3, name: "RAG vs Fine-tuning", item: "https://www.clinrag.com/guides/rag-vs-finetuning" },
+  ],
+};
 
 export default function RagVsFinetuning() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <div className="mb-8">
         <Link href="/guides" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Guides</Link>
       </div>
 
       <article className="prose-clinical">
         <h1>RAG vs Fine-tuning in Healthcare</h1>
+
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
+          <span><strong>Author:</strong> ClinRAG Editorial Team</span>
+          <span><strong>Last updated:</strong> May 15, 2026</span>
+          <span><strong>Reading time:</strong> 10 min</span>
+        </div>
+
         <p className="text-xl text-gray-500 mb-8">Understanding when to use RAG vs fine-tuning for medical AI applications.</p>
 
         <h2>The Two Approaches</h2>
@@ -65,7 +112,16 @@ export default function RagVsFinetuning() {
 
         <h2>Recommendation</h2>
         <p>For most healthcare RAG projects, start with RAG alone. It&apos;s cheaper, faster to deploy, and provides the evidence-based responses that clinical users expect. Add fine-tuning later if you need better output formatting or domain language understanding.</p>
-        <p>Ready to build? See our <Link href="/guides/build-medical-rag">Build Guide</Link> for step-by-step instructions.</p>
+
+        <hr className="my-8 border-gray-200" />
+
+        <h2>Related Resources</h2>
+        <ul>
+          <li><Link href="/what-is-clinical-rag">What Is Clinical RAG?</Link></li>
+          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/tools">Clinical RAG Tools Directory</Link></li>
+        </ul>
       </article>
     </div>
   );

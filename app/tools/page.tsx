@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clinical RAG Tools Directory — Medical RAG Platforms and Frameworks",
+  description: "Compare tools and frameworks for clinical RAG, medical knowledge retrieval, healthcare AI search, and citation-grounded LLM applications.",
+  alternates: {
+    canonical: "https://www.clinrag.com/tools",
+  },
+};
 
 const tools = [
   {

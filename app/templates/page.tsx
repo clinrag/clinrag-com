@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clinical RAG Templates — Prompts, Checklists, and Evaluation Frameworks",
+  description: "Practical templates for clinical RAG prompts, medical PDF preparation, evaluation workflows, and safety-first implementation planning.",
+  alternates: {
+    canonical: "https://www.clinrag.com/templates",
+  },
+};
 
 const templates = [
   {

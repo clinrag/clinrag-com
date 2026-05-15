@@ -1,8 +1,41 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "OpenEvidence — AI Medical Information with Peer-Reviewed Citations",
+  description: "Get evidence-based answers to clinical questions with citations to peer-reviewed medical literature using OpenEvidence.",
+  alternates: {
+    canonical: "https://www.clinrag.com/tools/openevidence-overview",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "OpenEvidence",
+  description: "AI-powered medical information tool with peer-reviewed evidence citations.",
+  url: "https://www.clinrag.com/tools/openevidence-overview",
+  applicationCategory: "HealthApplication",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.clinrag.com/tools" },
+    { "@type": "ListItem", position: 3, name: "OpenEvidence", item: "https://www.clinrag.com/tools/openevidence-overview" },
+  ],
+};
 
 export default function OpenEvidenceOverview() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@graph": [articleJsonLd, breadcrumbJsonLd] }) }}
+      />
+
       <div className="mb-8">
         <Link href="/tools" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Tools Directory</Link>
       </div>
@@ -53,7 +86,6 @@ export default function OpenEvidenceOverview() {
         <ul>
           <li>SaaS model may not meet all institutional data privacy requirements</li>
           <li>Curated literature scope may not cover rare conditions or emerging research</li>
-          <li>Not designed for patient-specific queries using EHR data</li>
           <li>Information should be verified by qualified healthcare professionals</li>
         </ul>
       </article>

@@ -1,14 +1,66 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "What Is Clinical RAG? Clinical Retrieval-Augmented Generation Explained",
+  description: "Learn what Clinical RAG is, how retrieval-augmented generation supports healthcare knowledge retrieval, and why citation-grounded AI matters in medical workflows.",
+  alternates: {
+    canonical: "https://www.clinrag.com/what-is-clinical-rag",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "What Is Clinical RAG? Clinical Retrieval-Augmented Generation Explained",
+  description: "An overview of Retrieval-Augmented Generation (RAG) in healthcare and clinical applications.",
+  author: {
+    "@type": "Organization",
+    name: "ClinRAG",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "ClinRAG",
+  },
+  datePublished: "2026-05-15",
+  dateModified: "2026-05-15",
+  mainEntityOfPage: "https://www.clinrag.com/what-is-clinical-rag",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "What is Clinical RAG?", item: "https://www.clinrag.com/what-is-clinical-rag" },
+  ],
+};
 
 export default function WhatIsClinicalRAG() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <div className="mb-8">
         <Link href="/" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Home</Link>
       </div>
 
       <article className="prose-clinical">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">What is Clinical RAG?</h1>
+
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
+          <span><strong>Author:</strong> ClinRAG Editorial Team</span>
+          <span><strong>Last updated:</strong> May 15, 2026</span>
+          <span><strong>Reading time:</strong> 8 min</span>
+        </div>
+
         <p className="text-xl text-gray-500 mb-8">Understanding Retrieval-Augmented Generation in healthcare and clinical applications.</p>
 
         <h2>The Problem with LLMs in Healthcare</h2>
@@ -93,6 +145,17 @@ export default function WhatIsClinicalRAG() {
           <li>Browse the <Link href="/tools">Tools Directory</Link> for frameworks and platforms</li>
           <li>Read <Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
           <li>View the <Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
+        </ul>
+
+        <hr className="my-8 border-gray-200" />
+
+        <h2>Related Resources</h2>
+        <ul>
+          <li><Link href="/tools">Clinical RAG Tools Directory</Link></li>
+          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/guides/rag-vs-finetuning">RAG vs Fine-tuning in Healthcare</Link></li>
+          <li><Link href="/guides/private-deployment">Private Medical RAG Deployment</Link></li>
         </ul>
       </article>
     </div>

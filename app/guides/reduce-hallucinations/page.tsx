@@ -1,14 +1,61 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "How to Reduce Hallucinations in Medical AI — 7 Proven Techniques",
+  description: "Practical techniques to minimize hallucinations when building clinical RAG systems, from retrieval quality to self-consistency checks.",
+  alternates: {
+    canonical: "https://www.clinrag.com/guides/reduce-hallucinations",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Reduce Hallucinations in Medical AI",
+  description: "Practical techniques to minimize hallucinations when building clinical RAG systems.",
+  author: { "@type": "Organization", name: "ClinRAG" },
+  publisher: { "@type": "Organization", name: "ClinRAG" },
+  datePublished: "2026-05-15",
+  dateModified: "2026-05-15",
+  mainEntityOfPage: "https://www.clinrag.com/guides/reduce-hallucinations",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Reduce Hallucinations", item: "https://www.clinrag.com/guides/reduce-hallucinations" },
+  ],
+};
 
 export default function ReduceHallucinations() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <div className="mb-8">
         <Link href="/guides" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Guides</Link>
       </div>
 
       <article className="prose-clinical">
         <h1>How to Reduce Hallucinations in Medical AI</h1>
+
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
+          <span><strong>Author:</strong> ClinRAG Editorial Team</span>
+          <span><strong>Last updated:</strong> May 15, 2026</span>
+          <span><strong>Reading time:</strong> 12 min</span>
+        </div>
+
         <p className="text-xl text-gray-500 mb-8">Practical techniques to minimize hallucinations when building clinical RAG systems.</p>
 
         <h2>What Are Hallucinations in Medical AI?</h2>
@@ -22,7 +69,7 @@ export default function ReduceHallucinations() {
         </ul>
 
         <h2>Why Hallucinations Are Especially Dangerous in Healthcare</h2>
-        <p>A hallucinated drug dosage could lead to patient harm. A fabricated clinical guideline could result in inappropriate treatment. In healthcare, hallucinations aren&apos;t just annoying — they are potentially dangerous. This makes hallucination reduction the single most important quality concern for medical RAG systems.</p>
+        <p>A hallucinated drug dosage could lead to harm. A fabricated clinical guideline could result in inappropriate treatment. In healthcare, hallucinations aren&apos;t just annoying — they are potentially dangerous. This makes hallucination reduction the single most important quality concern for medical RAG systems.</p>
 
         <h2>Technique 1: Improve Retrieval Quality</h2>
         <p>The best defense against hallucinations is ensuring the LLM has the right context:</p>
@@ -94,6 +141,16 @@ Note: This does not constitute medical advice.`}</pre>
         </ul>
 
         <p>See our <Link href="/guides/evaluation-checklist">Evaluation Checklist</Link> for a complete testing framework.</p>
+
+        <hr className="my-8 border-gray-200" />
+
+        <h2>Related Resources</h2>
+        <ul>
+          <li><Link href="/what-is-clinical-rag">What Is Clinical RAG?</Link></li>
+          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
+          <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
+        </ul>
       </article>
     </div>
   );

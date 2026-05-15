@@ -1,8 +1,41 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ClinicalKey AI — Elsevier's Medical Content with AI Search",
+  description: "Access Elsevier's comprehensive medical content library with AI-powered search across 75+ medical specialties via ClinicalKey AI.",
+  alternates: {
+    canonical: "https://www.clinrag.com/tools/clinicalkey-ai-overview",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "ClinicalKey AI",
+  description: "Elsevier's medical content library with AI-powered search and summarization.",
+  url: "https://www.clinrag.com/tools/clinicalkey-ai-overview",
+  applicationCategory: "HealthApplication",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.clinrag.com/tools" },
+    { "@type": "ListItem", position: 3, name: "ClinicalKey AI", item: "https://www.clinrag.com/tools/clinicalkey-ai-overview" },
+  ],
+};
 
 export default function ClinicalKeyAIOverview() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@graph": [articleJsonLd, breadcrumbJsonLd] }) }}
+      />
+
       <div className="mb-8">
         <Link href="/tools" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Tools Directory</Link>
       </div>

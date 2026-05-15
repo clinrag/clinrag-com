@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ClinRAG — Clinical RAG Resources for Healthcare AI",
+  description: "Clinical RAG tools, guides, templates, and evaluation checklists for building citation-grounded healthcare AI knowledge retrieval systems.",
+  alternates: {
+    canonical: "https://www.clinrag.com",
+  },
+};
 
 const tools = [
   { name: "RAGFlow", desc: "Open-source RAG engine with advanced document parsing", href: "/tools/ragflow-healthcare", tag: "Open Source" },

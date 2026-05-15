@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "RAG Evaluation Framework — Clinical RAG Quality Assessment",
+  description: "Structured evaluation framework for assessing clinical RAG system accuracy, safety, and citation quality.",
+  alternates: {
+    canonical: "https://www.clinrag.com/templates/evaluation-sheet",
+  },
+};
 
 export default function EvaluationSheet() {
   return (

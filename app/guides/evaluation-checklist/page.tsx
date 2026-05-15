@@ -1,14 +1,61 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clinical RAG Evaluation Checklist — Assess Safety, Accuracy, and Reliability",
+  description: "A comprehensive checklist for evaluating retrieval quality, citation grounding, and safety risks in clinical RAG systems.",
+  alternates: {
+    canonical: "https://www.clinrag.com/guides/evaluation-checklist",
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Clinical RAG Evaluation Checklist",
+  description: "A practical checklist for evaluating retrieval quality, citation grounding, and safety risks in clinical RAG systems.",
+  author: { "@type": "Organization", name: "ClinRAG" },
+  publisher: { "@type": "Organization", name: "ClinRAG" },
+  datePublished: "2026-05-15",
+  dateModified: "2026-05-15",
+  mainEntityOfPage: "https://www.clinrag.com/guides/evaluation-checklist",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: "https://www.clinrag.com/guides" },
+    { "@type": "ListItem", position: 3, name: "Evaluation Checklist", item: "https://www.clinrag.com/guides/evaluation-checklist" },
+  ],
+};
 
 export default function EvaluationChecklist() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <div className="mb-8">
         <Link href="/guides" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Guides</Link>
       </div>
 
       <article className="prose-clinical">
         <h1>Clinical RAG Evaluation Checklist</h1>
+
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
+          <span><strong>Author:</strong> ClinRAG Editorial Team</span>
+          <span><strong>Last updated:</strong> May 15, 2026</span>
+          <span><strong>Reading time:</strong> 12 min</span>
+        </div>
+
         <p className="text-xl text-gray-500 mb-8">A comprehensive checklist for evaluating the safety, accuracy, and reliability of medical RAG systems.</p>
 
         <h2>Factual Accuracy</h2>
@@ -65,7 +112,7 @@ export default function EvaluationChecklist() {
 
         <h2>Compliance</h2>
         <ul>
-          <li>[ ] Data handling complies with HIPAA (if applicable)</li>
+          <li>[ ] Data handling complies with applicable privacy regulations</li>
           <li>[ ] Audit logging is in place for clinical safety review</li>
           <li>[ ] User access controls are appropriate for the deployment</li>
           <li>[ ] Data retention policies are defined and implemented</li>
@@ -81,7 +128,17 @@ export default function EvaluationChecklist() {
           <li><strong>Continuous monitoring:</strong> Track real-world usage and flag anomalies</li>
         </ol>
 
-        <p>Download our <Link href="/templates/evaluation-sheet">RAG Evaluation Sheet</Link> template for a structured testing workbook.</p>
+        <p>See our <Link href="/templates/evaluation-sheet">RAG Evaluation Framework</Link> template for a structured testing workbook.</p>
+
+        <hr className="my-8 border-gray-200" />
+
+        <h2>Related Resources</h2>
+        <ul>
+          <li><Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/guides/reduce-hallucinations">How to Reduce Hallucinations in Medical AI</Link></li>
+          <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
+          <li><Link href="/tools">Clinical RAG Tools Directory</Link></li>
+        </ul>
       </article>
     </div>
   );

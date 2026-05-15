@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clinical RAG Prompt Template — Production-Ready Medical Prompts",
+  description: "Production-ready prompt templates for medical RAG systems with built-in safety constraints and citation requirements.",
+  alternates: {
+    canonical: "https://www.clinrag.com/templates/rag-prompt",
+  },
+};
 
 export default function RAGPromptTemplate() {
   return (
