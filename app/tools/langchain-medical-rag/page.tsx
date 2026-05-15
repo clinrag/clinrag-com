@@ -5,6 +5,7 @@ export default function LangChainMedicalRAG() {
     <ToolPage
       name="LangChain"
       tag="Framework"
+      website="https://www.langchain.com"
       overview="LangChain is the most widely adopted framework for building applications powered by LLMs. Its modular architecture allows developers to compose RAG pipelines from interchangeable components — document loaders, text splitters, embedding models, vector stores, retrievers, and LLMs — making it highly flexible for healthcare applications."
       features={[
         "Modular component architecture",

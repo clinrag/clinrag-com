@@ -63,19 +63,19 @@ export default function WhatIsClinicalRAG() {
 
         <h2>Clinical RAG Use Cases</h2>
 
-        <h3>Clinical Decision Support</h3>
-        <p>Physicians query patient symptoms, lab results, and history to get differential diagnoses and treatment recommendations grounded in current guidelines.</p>
+        <h3>Medical Information Retrieval</h3>
+        <p>Clinicians and researchers can retrieve relevant guidelines, literature, and protocols based on clinical topics, helping surface information that may inform their professional judgment.</p>
 
         <h3>Medical Literature Review</h3>
-        <p>Researchers quickly synthesize findings across thousands of papers for systematic reviews or meta-analyses.</p>
+        <p>Researchers can quickly synthesize findings across thousands of papers for systematic reviews or meta-analyses.</p>
 
-        <h3>Patient Education</h3>
-        <p>Generate patient-friendly explanations from clinical notes and medical references.</p>
+        <h3>Patient Education Materials</h3>
+        <p>Generate patient-friendly explanations based on clinical notes and medical references, subject to clinician review.</p>
 
-        <h3>Drug Interaction Checking</h3>
-        <p>Query pharmacological databases and clinical papers to identify potential drug-drug interactions.</p>
+        <h3>Pharmacology Research</h3>
+        <p>Query pharmacological information from clinical papers and drug databases to support medication review workflows.</p>
 
-        <h3>Coding and Billing</h3>
+        <h3>Coding and Billing Support</h3>
         <p>Match clinical documentation to appropriate ICD-10 and CPT codes using guideline-grounded RAG.</p>
 
         <h2>Challenges in Clinical RAG</h2>

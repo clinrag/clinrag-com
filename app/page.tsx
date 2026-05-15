@@ -1,20 +1,20 @@
 import Link from "next/link";
 
 const tools = [
-  { name: "RAGFlow", desc: "Open-source RAG engine with document parsing", href: "/tools/ragflow-healthcare", tag: "Open Source" },
-  { name: "Dify", desc: "LLM app development platform with RAG pipeline", href: "/tools/dify-medical-rag", tag: "Platform" },
-  { name: "LlamaIndex", desc: "Data framework for LLM applications", href: "/tools/llamaindex-clinical-rag", tag: "Framework" },
-  { name: "LangChain", desc: "Framework for building LLM-powered applications", href: "/tools/langchain-medical-rag", tag: "Framework" },
-  { name: "OpenEvidence", desc: "Clinical decision support powered by AI", href: "/tools/openevidence-overview", tag: "SaaS" },
-  { name: "Glass Health", desc: "AI-powered clinical documentation", href: "/tools/glass-health-overview", tag: "SaaS" },
-  { name: "ClinicalKey AI", desc: "Elsevier's AI clinical search and answers", href: "/tools/clinicalkey-ai-overview", tag: "Enterprise" },
+  { name: "RAGFlow", desc: "Open-source RAG engine with advanced document parsing", href: "/tools/ragflow-healthcare", tag: "Open Source" },
+  { name: "Dify", desc: "LLM app development platform with visual RAG builder", href: "/tools/dify-medical-rag", tag: "Platform" },
+  { name: "LlamaIndex", desc: "Data framework for connecting custom data to LLMs", href: "/tools/llamaindex-clinical-rag", tag: "Framework" },
+  { name: "LangChain", desc: "Composable framework for LLM applications", href: "/tools/langchain-medical-rag", tag: "Framework" },
+  { name: "OpenEvidence", desc: "AI clinical search with peer-reviewed evidence citations", href: "/tools/openevidence-overview", tag: "SaaS" },
+  { name: "Glass Health", desc: "AI-powered clinical documentation assistant", href: "/tools/glass-health-overview", tag: "SaaS" },
+  { name: "ClinicalKey AI", desc: "Elsevier's AI clinical search and summarization", href: "/tools/clinicalkey-ai-overview", tag: "Enterprise" },
 ];
 
 const guides = [
-  { title: "How to Build a Medical RAG System", desc: "Step-by-step guide for building a clinical RAG pipeline", href: "/guides/build-medical-rag" },
-  { title: "RAG vs Fine-tuning in Healthcare", desc: "When to use RAG vs fine-tuning for medical AI applications", href: "/guides/rag-vs-finetuning" },
+  { title: "How to Build a Medical RAG System", desc: "Step-by-step guide from data ingestion to deployment", href: "/guides/build-medical-rag" },
+  { title: "RAG vs Fine-tuning in Healthcare", desc: "When to use RAG vs fine-tuning for medical AI", href: "/guides/rag-vs-finetuning" },
   { title: "Clinical RAG Evaluation Checklist", desc: "Comprehensive checklist for evaluating medical RAG systems", href: "/guides/evaluation-checklist" },
-  { title: "How to Reduce Hallucinations in Medical AI", desc: "Techniques to minimize hallucinations in clinical contexts", href: "/guides/reduce-hallucinations" },
+  { title: "How to Reduce Hallucinations in Medical AI", desc: "Techniques to minimize fabricated outputs in clinical contexts", href: "/guides/reduce-hallucinations" },
   { title: "Private Medical RAG Deployment", desc: "Deploying HIPAA-compliant RAG systems on-premise", href: "/guides/private-deployment" },
 ];
 
@@ -29,16 +29,23 @@ export default function Home() {
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
               </svg>
-              Clinical AI Resources
+              Healthcare AI Knowledge Retrieval
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 tracking-tight">
-              Your Guide to
-              <span className="text-teal-600"> Clinical RAG</span>
+              Clinical RAG Resources for<br />
+              <span className="text-teal-600">Safer Medical AI Search</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">
-              Discover tools, guides, and templates for building Retrieval-Augmented Generation systems
-              in healthcare and clinical applications.
+              ClinRAG helps healthcare AI builders, clinical informatics teams, and medical developers
+              evaluate tools, design workflows, and build citation-grounded knowledge retrieval systems.
             </p>
+            <div className="mt-4 flex flex-wrap gap-3 justify-center text-sm text-gray-500">
+              <span>Built for healthcare AI builders</span>
+              <span className="hidden sm:inline">•</span>
+              <span>Citation-grounded clinical retrieval</span>
+              <span className="hidden sm:inline">•</span>
+              <span>Safety-first templates</span>
+            </div>
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <Link href="/tools" className="bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors shadow-lg shadow-teal-200">
                 Browse Tools
@@ -60,8 +67,8 @@ export default function Home() {
                 <h2 className="text-3xl font-bold mb-4">What is Clinical RAG?</h2>
                 <p className="text-teal-100 text-lg leading-relaxed">
                   Retrieval-Augmented Generation (RAG) combines information retrieval with LLMs to produce
-                  accurate, evidence-based responses. In clinical settings, this means grounding AI answers
-                  in medical literature, guidelines, and patient records.
+                  responses grounded in authoritative medical sources. In clinical contexts, this enables
+                  citation-traced access to guidelines, literature, and institutional protocols.
                 </p>
               </div>
               <Link href="/what-is-clinical-rag" className="mt-6 md:mt-0 inline-flex items-center bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg font-medium transition-colors whitespace-nowrap">
@@ -78,7 +85,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900">Clinical RAG Tools Directory</h2>
             <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
-              Explore the leading frameworks, platforms, and tools for building medical RAG systems.
+              Curated overview of frameworks, platforms, and tools for building medical RAG systems.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -137,9 +144,9 @@ export default function Home() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900">Ready-to-Use Templates</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Safety-First Templates</h2>
             <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
-              Download prompt templates, checklists, and evaluation sheets to accelerate your clinical RAG project.
+              Prompt templates, checklists, and evaluation frameworks to accelerate your clinical RAG project.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <Link href="/templates/rag-prompt" className="bg-white border border-gray-200 px-5 py-3 rounded-lg hover:border-teal-300 hover:shadow transition-all text-sm font-medium text-gray-700">
@@ -149,7 +156,7 @@ export default function Home() {
                 PDF Prep Checklist
               </Link>
               <Link href="/templates/evaluation-sheet" className="bg-white border border-gray-200 px-5 py-3 rounded-lg hover:border-teal-300 hover:shadow transition-all text-sm font-medium text-gray-700">
-                Evaluation Sheet
+                Evaluation Framework
               </Link>
             </div>
           </div>

@@ -11,6 +11,7 @@ export default function Contact() {
 
   async function handleNewsletterSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setNewsletterMsg("");
     try {
       const res = await fetch("/api/subscribers", {
         method: "POST",
@@ -18,16 +19,19 @@ export default function Contact() {
         body: JSON.stringify({ id: Date.now().toString(), email: newsletterEmail, created_at: new Date().toISOString() }),
       });
       if (res.ok) {
-        setNewsletterMsg("Subscribed successfully!");
+        setNewsletterMsg("success");
         setNewsletterEmail("");
+      } else {
+        setNewsletterMsg("error");
       }
     } catch {
-      setNewsletterMsg("Subscription failed. Please try again.");
+      setNewsletterMsg("error");
     }
   }
 
   async function handleContactSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setContactMsg("");
     try {
       const res = await fetch("/api/messages", {
         method: "POST",
@@ -35,11 +39,13 @@ export default function Contact() {
         body: JSON.stringify({ id: Date.now().toString(), ...contactForm, created_at: new Date().toISOString(), read: false }),
       });
       if (res.ok) {
-        setContactMsg("Message sent successfully!");
+        setContactMsg("success");
         setContactForm({ name: "", email: "", message: "" });
+      } else {
+        setContactMsg("error");
       }
     } catch {
-      setContactMsg("Failed to send. Please try again.");
+      setContactMsg("error");
     }
   }
 
@@ -75,7 +81,8 @@ export default function Contact() {
               Subscribe
             </button>
           </form>
-          {newsletterMsg && <p className="text-teal-200 text-sm mt-3">{newsletterMsg}</p>}
+          {newsletterMsg === "success" && <p className="text-green-200 text-sm mt-3 font-medium">Subscribed successfully! You will receive updates via email.</p>}
+          {newsletterMsg === "error" && <p className="text-red-200 text-sm mt-3 font-medium">Subscription failed. Please try again or email us at <a href="mailto:hello@clinrag.com?subject=Newsletter Subscription" className="underline">hello@clinrag.com</a>.</p>}
           {!newsletterMsg && <p className="text-teal-200 text-sm mt-3">No spam. Unsubscribe anytime.</p>}
         </div>
       </section>
@@ -128,8 +135,18 @@ export default function Contact() {
               Send Message
             </button>
           </form>
-          {contactMsg && <p className="text-teal-600 text-sm mt-4">{contactMsg}</p>}
-          <p className="text-gray-500 text-sm mt-4">Or email us directly at: <a href="mailto:hello@clinrag.com" className="text-teal-600 hover:text-teal-700">hello@clinrag.com</a></p>
+          {contactMsg === "success" && (
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+              <p className="text-green-800 font-medium">Message sent successfully!</p>
+              <p className="text-green-600 text-sm mt-1">We will get back to you within 1-2 business days.</p>
+            </div>
+          )}
+          {contactMsg === "error" && (
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-4">
+              <p className="text-red-800 font-medium">Failed to send message.</p>
+              <p className="text-red-600 text-sm mt-1">Please email us directly at <a href="mailto:hello@clinrag.com" className="text-teal-600 hover:text-teal-700 underline">hello@clinrag.com</a>.</p>
+            </div>
+          )}
         </div>
       </section>
 

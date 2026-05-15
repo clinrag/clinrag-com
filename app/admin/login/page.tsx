@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -23,7 +32,7 @@ export default function AdminLogin() {
               id="username"
               name="username"
               type="text"
-              defaultValue="admin"
+              autoComplete="username"
               className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
             />
           </div>
@@ -35,7 +44,7 @@ export default function AdminLogin() {
               id="password"
               name="password"
               type="password"
-              defaultValue="clinrag2024"
+              autoComplete="current-password"
               className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
             />
           </div>

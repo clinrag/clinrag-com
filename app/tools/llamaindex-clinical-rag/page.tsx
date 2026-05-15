@@ -5,6 +5,7 @@ export default function LlamaIndexClinicalRAG() {
     <ToolPage
       name="LlamaIndex"
       tag="Framework"
+      website="https://www.llamaindex.ai"
       overview="LlamaIndex (formerly GPT Index) is a data framework that provides tools for ingesting, indexing, and querying custom data sources with LLMs. It offers sophisticated indexing strategies including vector indices, tree indices, and keyword indices — making it powerful for complex medical knowledge retrieval."
       features={[
         "Advanced indexing strategies (vector, tree, keyword)",

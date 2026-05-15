@@ -50,8 +50,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>© {new Date().getFullYear()} ClinRAG.com — All rights reserved.</p>
-          <p className="mt-1"><Link href="/admin/login" className="text-gray-600 hover:text-gray-400 transition-colors">Admin Login</Link></p>
+          <p>© {new Date().getFullYear()} ClinRAG — All rights reserved.</p>
           <p className="mt-2 text-gray-500">
             Disclaimer: Content is for informational purposes only and does not constitute medical advice.
           </p>

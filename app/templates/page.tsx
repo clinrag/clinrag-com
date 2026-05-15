@@ -13,14 +13,14 @@ const templates = [
     desc: "Step-by-step checklist for preparing medical documents for RAG ingestion",
     href: "/templates/pdf-checklist",
     type: "Checklist",
-    format: "PDF",
+    format: "Interactive",
   },
   {
-    title: "RAG Evaluation Sheet",
-    desc: "Structured workbook template for evaluating clinical RAG system quality",
+    title: "RAG Evaluation Framework",
+    desc: "Structured evaluation criteria for assessing clinical RAG system quality",
     href: "/templates/evaluation-sheet",
-    type: "Workbook",
-    format: "Spreadsheet",
+    type: "Framework",
+    format: "Interactive",
   },
 ];
 

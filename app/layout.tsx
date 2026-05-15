@@ -4,9 +4,37 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "ClinRAG — Clinical Retrieval-Augmented Generation",
-  description: "The comprehensive resource for Retrieval-Augmented Generation in clinical and healthcare applications. Explore tools, guides, and templates for building medical RAG systems.",
-  keywords: "clinical RAG, medical AI, healthcare LLM, retrieval augmented generation, medical NLP, clinical decision support",
+  metadataBase: new URL("https://www.clinrag.com"),
+  title: {
+    default: "ClinRAG — Clinical RAG Resources for Healthcare AI",
+    template: "%s | ClinRAG",
+  },
+  description: "Clinical RAG tools, guides, templates, and evaluation checklists for building citation-grounded healthcare AI knowledge systems.",
+  keywords: [
+    "Clinical RAG",
+    "Medical RAG",
+    "Healthcare AI",
+    "Retrieval-Augmented Generation",
+    "Clinical AI Search",
+    "Medical Knowledge Retrieval",
+  ],
+  openGraph: {
+    title: "ClinRAG — Clinical RAG Resources for Healthcare AI",
+    description: "Tools, guides, and templates for building citation-grounded healthcare AI knowledge systems.",
+    url: "https://www.clinrag.com",
+    siteName: "ClinRAG",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ClinRAG — Clinical RAG Resources for Healthcare AI",
+    description: "Tools, guides, and templates for building citation-grounded healthcare AI knowledge systems.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

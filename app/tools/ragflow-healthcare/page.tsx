@@ -5,6 +5,7 @@ export default function RAGFlowHealthcare() {
     <ToolPage
       name="RAGFlow"
       tag="Open Source"
+      website="https://ragflow.io"
       overview="RAGFlow is an open-source RAG engine designed for deep document understanding. It excels at parsing complex documents like PDFs with tables, figures, charts, and medical notation — making it particularly well-suited for healthcare applications where documents are rarely plain text."
       features={[
         "Deep document understanding with layout analysis",

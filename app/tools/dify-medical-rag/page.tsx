@@ -5,6 +5,7 @@ export default function DifyMedicalRAG() {
     <ToolPage
       name="Dify"
       tag="Platform"
+      website="https://dify.ai"
       overview="Dify is an open-source LLM application development platform that provides a visual interface for building RAG pipelines. Its drag-and-drop workflow builder makes it accessible to healthcare teams without deep engineering expertise, while its API support enables integration with existing clinical systems."
       features={[
         "Visual drag-and-drop workflow builder",
