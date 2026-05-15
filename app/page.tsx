@@ -15,7 +15,7 @@ const guides = [
   { title: "RAG vs Fine-tuning in Healthcare", desc: "When to use RAG vs fine-tuning for medical AI", href: "/guides/rag-vs-finetuning" },
   { title: "Clinical RAG Evaluation Checklist", desc: "Comprehensive checklist for evaluating medical RAG systems", href: "/guides/evaluation-checklist" },
   { title: "How to Reduce Hallucinations in Medical AI", desc: "Techniques to minimize fabricated outputs in clinical contexts", href: "/guides/reduce-hallucinations" },
-  { title: "Private Medical RAG Deployment", desc: "Deploying HIPAA-compliant RAG systems on-premise", href: "/guides/private-deployment" },
+  { title: "Private Medical RAG Deployment", desc: "Design considerations for privacy-conscious clinical RAG deployments", href: "/guides/private-deployment" },
 ];
 
 export default function Home() {

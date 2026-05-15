@@ -12,13 +12,13 @@ export default function PrivateDeployment() {
         <p className="text-xl text-gray-500 mb-8">How to design a privacy-conscious medical RAG deployment for institution-controlled environments.</p>
 
         <h2>Why Private Deployment Matters</h2>
-        <p>Healthcare data is subject to strict privacy regulations. In the US, HIPAA requires that Protected Health Information (PHI) be handled with specific safeguards. Using cloud LLM APIs (OpenAI, Anthropic) sends patient data to external servers, which may violate HIPAA unless a Business Associate Agreement (BAA) is in place.</p>
-        <p>A fully private, on-premise RAG deployment ensures that:</p>
+        <p>Healthcare data is subject to strict privacy regulations. In the US, HIPAA requires that Protected Health Information (PHI) be handled with specific safeguards. Using cloud LLM APIs (OpenAI, Anthropic) sends sensitive data to external servers, which may raise compliance concerns unless a Business Associate Agreement (BAA) is in place.</p>
+        <p>A carefully designed private or on-premise RAG deployment can help keep sensitive data within institution-controlled infrastructure when combined with appropriate governance, access controls, logging, and vendor review:</p>
         <ul>
-          <li>Patient data never leaves your infrastructure</li>
-          <li>All processing happens within your controlled environment</li>
-          <li>You maintain a complete audit trail</li>
-          <li>You control data retention and deletion</li>
+          <li>Sensitive data can be processed within controlled infrastructure</li>
+          <li>Processing pathways can be audited and restricted</li>
+          <li>Data retention and deletion policies can be institution-defined</li>
+          <li>External API exposure can be minimized or avoided</li>
         </ul>
 
         <h2>Architecture Overview</h2>

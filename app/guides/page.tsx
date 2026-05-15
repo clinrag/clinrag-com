@@ -35,7 +35,7 @@ const guides = [
   },
   {
     title: "Private Medical RAG Deployment",
-    desc: "Deploy HIPAA-compliant RAG systems on-premise",
+    desc: "Design considerations for privacy-conscious clinical RAG deployments",
     href: "/guides/private-deployment",
     icon: "🔒",
     difficulty: "Advanced",

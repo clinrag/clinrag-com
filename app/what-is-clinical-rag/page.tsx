@@ -18,7 +18,7 @@ export default function WhatIsClinicalRAG() {
         <h2>What is RAG?</h2>
         <p><strong>Retrieval-Augmented Generation (RAG)</strong> is an architecture that combines information retrieval with generative AI. Instead of asking an LLM to answer from memory alone, RAG:</p>
         <ol>
-          <li><strong>Retrieves</strong> relevant documents from a knowledge base (medical literature, guidelines, EHR data)</li>
+          <li><strong>Retrieves</strong> relevant documents from a knowledge base (medical literature, clinical guidelines, institutional protocols, and curated healthcare resources)</li>
           <li><strong>Augments</strong> the user&apos;s query with these retrieved documents as context</li>
           <li><strong>Generates</strong> a response grounded in the retrieved evidence</li>
         </ol>
@@ -50,11 +50,11 @@ export default function WhatIsClinicalRAG() {
         <pre>{`Clinical Query → Embedding Model → Vector Database → Relevant Documents → LLM → Grounded Answer
                                                                     ↑
                                                       Medical Knowledge Base
-                                                      (Guidelines, Papers, EHR)`}</pre>
+                                                      (Guidelines, Papers, Protocols)`}</pre>
 
         <h3>Key Components</h3>
         <ul>
-          <li><strong>Document Ingestion:</strong> Medical PDFs, clinical guidelines, EHR records are chunked and embedded</li>
+          <li><strong>Document Ingestion:</strong> Medical PDFs, clinical guidelines, institutional protocols, and curated reference documents are chunked and embedded</li>
           <li><strong>Vector Store:</strong> Embeddings stored in databases like Pinecone, Milvus, or FAISS</li>
           <li><strong>Retrieval:</strong> Semantic search finds the most relevant documents for each query</li>
           <li><strong>LLM Generation:</strong> The model generates responses conditioned on both the query and retrieved context</li>
@@ -92,7 +92,7 @@ export default function WhatIsClinicalRAG() {
         <ul>
           <li>Browse the <Link href="/tools">Tools Directory</Link> for frameworks and platforms</li>
           <li>Read <Link href="/guides/build-medical-rag">How to Build a Medical RAG System</Link></li>
-          <li>Download the <Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
+          <li>View the <Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
         </ul>
       </article>
     </div>
