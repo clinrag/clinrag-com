@@ -94,7 +94,7 @@ export default function BestClinicalRagTools() {
 
         <h2>Best for Complex Knowledge Graphs: LlamaIndex</h2>
         <p><Link href="/tools/llamaindex-clinical-rag">LlamaIndex</Link> excels at building complex knowledge structures that go beyond simple document retrieval. Its advanced indexing strategies — including vector indices, tree indices, and knowledge graph construction — enable multi-hop reasoning across interconnected medical documents.</p>
-        <p>This makes LlamaIndex particularly valuable when you need to connect patient records with research literature, cross-reference drug interactions across multiple sources, or build decision trees from clinical guidelines. The trade-off is that it requires Python programming knowledge and has a steeper learning curve.</p>
+        <p>This makes LlamaIndex particularly valuable when you need to connect multiple healthcare knowledge sources such as guidelines, protocols, and research literature, cross-reference drug interactions across multiple sources, or build decision trees from clinical guidelines. The trade-off is that it requires Python programming knowledge and has a steeper learning curve.</p>
 
         <h2>Most Versatile Framework: LangChain</h2>
         <p><Link href="/tools/langchain-medical-rag">LangChain</Link> is the most widely adopted framework for building LLM applications, with extensive integrations across document loaders, embedding models, vector stores, and LLM providers. Its modular architecture allows you to compose RAG pipelines from interchangeable components.</p>

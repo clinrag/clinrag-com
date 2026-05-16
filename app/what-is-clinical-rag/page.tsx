@@ -133,7 +133,7 @@ export default function WhatIsClinicalRAG() {
         <h2>Challenges in Clinical RAG</h2>
         <ul>
           <li><strong>Document quality:</strong> Medical documents require careful parsing (tables, figures, references)</li>
-          <li><strong>Regulatory compliance:</strong> HIPAA, GDPR, and FDA regulations for AI in healthcare</li>
+          <li><strong>Regulatory and governance:</strong> Privacy, security, clinical safety, and jurisdiction-specific healthcare AI requirements</li>
           <li><strong>Latency:</strong> Clinical workflows require fast responses</li>
           <li><strong>Evaluation:</strong> Measuring accuracy in high-stakes medical contexts</li>
           <li><strong>Bias:</strong> Ensuring equitable recommendations across populations</li>
