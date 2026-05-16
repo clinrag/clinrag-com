@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact ClinRAG — Newsletter, Questions, and Sponsorship",
-  description: "Subscribe to the ClinRAG newsletter, contact the editorial team, or inquire about sponsorship opportunities.",
+  title: "Clinical RAG Weekly — Newsletter, Contact & Sponsor",
+  description: "Subscribe to Clinical RAG Weekly. Contact the ClinRAG editorial team or inquire about sponsorship opportunities.",
   alternates: {
     canonical: "https://www.clinrag.com/contact",
   },
@@ -16,15 +16,15 @@ export default function Contact() {
         <Link href="/" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Home</Link>
       </div>
 
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Newsletter, Contact & Sponsor</h1>
-      <p className="text-xl text-gray-500 mb-12">Stay connected with the ClinRAG community.</p>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">Clinical RAG Weekly — Newsletter, Contact & Sponsor</h1>
+      <p className="text-xl text-gray-500 mb-12">Subscribe, get in touch, or explore sponsorship opportunities.</p>
 
       {/* Newsletter */}
       <section className="mb-16">
         <div className="bg-gradient-to-r from-teal-500 to-blue-600 rounded-2xl p-8 text-white">
-          <h2 className="text-2xl font-bold mb-3">ClinRAG Newsletter</h2>
+          <h2 className="text-2xl font-bold mb-3">Clinical RAG Weekly</h2>
           <p className="text-teal-100 mb-6 max-w-lg">
-            Get the latest tools, research, and best practices in clinical RAG delivered to your inbox monthly.
+            Tools, papers, templates, and implementation notes for healthcare AI knowledge retrieval — delivered to your inbox.
           </p>
           <a
             href="mailto:hello@clinrag.com?subject=ClinRAG%20Newsletter%20Subscription"

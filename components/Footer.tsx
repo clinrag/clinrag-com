@@ -42,7 +42,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-3">Connect</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/contact" className="hover:text-teal-400 transition-colors">Newsletter</Link></li>
+              <li><Link href="/starter-kit" className="hover:text-teal-400 transition-colors">Free Starter Kit</Link></li>
+              <li><Link href="/contact" className="hover:text-teal-400 transition-colors">Clinical RAG Weekly</Link></li>
               <li><Link href="/contact" className="hover:text-teal-400 transition-colors">Contact Us</Link></li>
               <li><Link href="/contact#sponsor" className="hover:text-teal-400 transition-colors">Sponsor</Link></li>
             </ul>

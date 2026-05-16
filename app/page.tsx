@@ -57,8 +57,8 @@ export default function Home() {
               <Link href="/tools" className="bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors shadow-lg shadow-teal-200">
                 Browse Tools
               </Link>
-              <Link href="/guides" className="bg-white text-teal-600 px-6 py-3 rounded-lg font-medium border border-teal-200 hover:bg-teal-50 transition-colors">
-                Read Guides
+              <Link href="/starter-kit" className="bg-white text-teal-600 px-6 py-3 rounded-lg font-medium border border-teal-200 hover:bg-teal-50 transition-colors">
+                Get Free Starter Kit
               </Link>
             </div>
           </div>
@@ -179,13 +179,18 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-900 rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Stay Updated on Clinical AI</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Clinical RAG Weekly</h2>
             <p className="text-gray-400 max-w-xl mx-auto mb-8">
-              Get the latest tools, guides, and research in clinical RAG delivered to your inbox.
+              Tools, papers, templates, and implementation notes for healthcare AI knowledge retrieval — delivered to your inbox.
             </p>
-            <Link href="/contact" className="inline-flex items-center bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors">
-              Subscribe to Newsletter
-            </Link>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/starter-kit" className="inline-flex items-center bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors">
+                Get the Free Starter Kit
+              </Link>
+              <Link href="/contact" className="inline-flex items-center bg-white/10 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-colors border border-white/20">
+                Subscribe to Newsletter
+              </Link>
+            </div>
           </div>
         </div>
       </section>

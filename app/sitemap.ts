@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/templates/evaluation-sheet", priority: 0.5, changeFreq: "monthly" as const },
     { path: "/templates/rag-evaluation-sheet", priority: 0.5, changeFreq: "monthly" as const },
     { path: "/contact", priority: 0.4, changeFreq: "yearly" as const },
+    { path: "/starter-kit", priority: 0.8, changeFreq: "monthly" as const },
   ];
 
   return routes.map((route) => ({
