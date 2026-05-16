@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BeehiivForm from "@/components/BeehiivForm";
 
 export const metadata: Metadata = {
   title: "ClinRAG — Clinical RAG Resources for Healthcare AI",
@@ -183,14 +184,10 @@ export default function Home() {
             <p className="text-gray-400 max-w-xl mx-auto mb-8">
               Tools, papers, templates, and implementation notes for healthcare AI knowledge retrieval — delivered to your inbox.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/starter-kit" className="inline-flex items-center bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors">
-                Get the Free Starter Kit
-              </Link>
-              <Link href="/contact" className="inline-flex items-center bg-white/10 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-colors border border-white/20">
-                Subscribe to Newsletter
-              </Link>
+            <div className="bg-white rounded-xl p-4 max-w-md mx-auto">
+              <BeehiivForm />
             </div>
+            <p className="text-gray-500 text-sm mt-4">No spam. Unsubscribe anytime.</p>
           </div>
         </div>
       </section>

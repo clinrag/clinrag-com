@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BeehiivForm from "@/components/BeehiivForm";
 
 export const metadata: Metadata = {
   title: "Free Clinical RAG Starter Kit — Checklists, Prompts & Templates",
@@ -82,17 +83,12 @@ export default function StarterKit() {
 
       {/* Newsletter Signup */}
       <div className="bg-gray-900 rounded-2xl p-8 md:p-12 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Get Updates on Clinical RAG</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Join Clinical RAG Weekly</h2>
         <p className="text-gray-400 max-w-xl mx-auto mb-8">
-          Join the Clinical RAG Weekly newsletter. Tools, papers, templates, and implementation notes for healthcare AI knowledge retrieval — delivered monthly.
+          Tools, papers, templates, and implementation notes for healthcare AI knowledge retrieval — delivered to your inbox.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-          <a
-            href="mailto:hello@clinrag.com?subject=ClinRAG%20Newsletter%20Subscription"
-            className="bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors flex-1"
-          >
-            Subscribe via Email
-          </a>
+        <div className="bg-white rounded-xl p-4 max-w-md mx-auto">
+          <BeehiivForm />
         </div>
         <p className="text-gray-500 text-sm mt-4">No spam. Unsubscribe anytime.</p>
       </div>
