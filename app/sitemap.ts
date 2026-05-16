@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools", priority: 0.9, changeFreq: "weekly" as const },
     { path: "/tools/best-clinical-rag-tools", priority: 0.7, changeFreq: "monthly" as const },
     { path: "/tools/open-source-medical-rag-tools", priority: 0.7, changeFreq: "monthly" as const },
+    { path: "/tools/clinical-rag-readiness-checker", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/tools/clinical-rag-prompt-builder", priority: 0.6, changeFreq: "monthly" as const },
     { path: "/tools/ragflow-healthcare", priority: 0.7, changeFreq: "monthly" as const },
     { path: "/tools/dify-medical-rag", priority: 0.7, changeFreq: "monthly" as const },
     { path: "/tools/llamaindex-clinical-rag", priority: 0.7, changeFreq: "monthly" as const },
@@ -32,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/templates/rag-prompt", priority: 0.5, changeFreq: "monthly" as const },
     { path: "/templates/pdf-checklist", priority: 0.5, changeFreq: "monthly" as const },
     { path: "/templates/evaluation-sheet", priority: 0.5, changeFreq: "monthly" as const },
+    { path: "/templates/rag-evaluation-sheet", priority: 0.5, changeFreq: "monthly" as const },
     { path: "/contact", priority: 0.4, changeFreq: "yearly" as const },
   ];
 
