@@ -15,7 +15,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed">
-              The comprehensive resource for Retrieval-Augmented Generation in clinical and healthcare applications.
+              ClinRAG is a practical resource hub for clinical retrieval-augmented generation, medical AI knowledge retrieval, tool comparison, evaluation workflows, and safety-first implementation templates.
             </p>
           </div>
 
