@@ -53,109 +53,108 @@ export default function WhatIsClinicalRAG() {
       </div>
 
       <article className="prose-clinical">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">What is Clinical RAG?</h1>
+        <h1>What Is Clinical RAG?</h1>
 
         <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
           <span><strong>Author:</strong> ClinRAG Editorial Team</span>
           <span><strong>Last updated:</strong> May 15, 2026</span>
-          <span><strong>Reading time:</strong> 8 min</span>
+          <span><strong>Reading time:</strong> 10 min</span>
         </div>
 
-        <p className="text-xl text-gray-500 mb-8">Understanding Retrieval-Augmented Generation in healthcare and clinical applications.</p>
+        <p className="text-xl text-gray-500 mb-8">A practical introduction to clinical retrieval-augmented generation for healthcare AI builders — how it works, where it fits, and what to consider before deploying.</p>
 
-        <h2>The Problem with LLMs in Healthcare</h2>
-        <p>Large Language Models (LLMs) like GPT-4 and Claude are trained on vast corpora of text, but this training data has a cutoff date and may contain inaccuracies. In healthcare, where decisions can be life-critical, relying solely on an LLM&apos;s parametric memory is dangerous. These models can <strong>hallucinate</strong> — generate plausible-sounding but incorrect information — which is unacceptable in clinical contexts.</p>
-        <p>Additionally, medical knowledge evolves rapidly. New guidelines, drug approvals, and clinical trial results are published daily. An LLM trained on data from 2023 cannot answer questions about a drug approved in 2024.</p>
-
-        <h2>What is RAG?</h2>
-        <p><strong>Retrieval-Augmented Generation (RAG)</strong> is an architecture that combines information retrieval with generative AI. Instead of asking an LLM to answer from memory alone, RAG:</p>
-        <ol>
-          <li><strong>Retrieves</strong> relevant documents from a knowledge base (medical literature, clinical guidelines, institutional protocols, and curated healthcare resources)</li>
-          <li><strong>Augments</strong> the user&apos;s query with these retrieved documents as context</li>
-          <li><strong>Generates</strong> a response grounded in the retrieved evidence</li>
-        </ol>
-
-        <blockquote>
-          RAG essentially gives the LLM an &quot;open book test&quot; — it can reference authoritative sources rather than guessing from memory.
-        </blockquote>
-
-        <h2>Why RAG is Especially Important in Clinical Settings</h2>
-
-        <h3>1. Evidence-Based Responses</h3>
-        <p>Every answer can be traced back to source documents — clinical guidelines, peer-reviewed papers, or hospital protocols. This creates an <strong>audit trail</strong> that clinicians can verify.</p>
-
-        <h3>2. Up-to-Date Knowledge</h3>
-        <p>When new research is published or guidelines are updated, you simply add the documents to the knowledge base. No retraining required.</p>
-
-        <h3>3. Domain Specificity</h3>
-        <p>Clinical RAG systems can be scoped to specific specialties — cardiology, oncology, emergency medicine — retrieving only from relevant sources.</p>
-
-        <h3>4. Reduced Hallucination Risk</h3>
-        <p>By grounding responses in retrieved source documents, RAG can reduce — though not eliminate — the risk of unsupported or fabricated outputs. This helps minimize incorrect drug names, dosages, or treatment protocols that may otherwise be generated.</p>
-
-        <h3>5. Compliance and Privacy</h3>
-        <p>Unlike public LLM APIs, RAG systems can be deployed on-premise with full control over data flow — important for privacy-conscious deployment and may support HIPAA-aligned workflows when combined with appropriate safeguards.</p>
+        <h2>Clinical RAG Definition</h2>
+        <p><strong>Clinical RAG</strong> (Retrieval-Augmented Generation) is an architecture for healthcare knowledge retrieval that combines document search with language model generation. Instead of relying on a model&apos;s internal training data, a clinical RAG system retrieves relevant information from a curated knowledge base — clinical guidelines, research literature, institutional protocols, drug databases — and uses that information to generate answers that are grounded in authoritative sources.</p>
+        <p>For healthcare AI builders, the practical value is straightforward: clinical RAG gives you a way to connect AI-powered search to your specific knowledge sources, with traceable citations and updatable content, without retraining any models. This makes it a cost-effective, safety-oriented approach for building medical information retrieval systems.</p>
+        <p>Medical RAG systems are used by clinical informatics teams, healthcare AI developers, and medical researchers to build tools that help users find, synthesize, and verify information from complex healthcare knowledge sources. The outputs are designed to support — not replace — professional clinical judgment.</p>
 
         <h2>How Clinical RAG Works</h2>
+        <p>A clinical RAG pipeline follows a retrieval-augment-generate loop:</p>
+        <ol>
+          <li><strong>Document ingestion:</strong> Medical PDFs, clinical guidelines, research articles, and institutional protocols are parsed, chunked, and converted into vector embeddings using an embedding model.</li>
+          <li><strong>Vector storage:</strong> Embeddings are stored in a vector database (e.g., Pinecone, Milvus, FAISS) with metadata for filtering by source, date, specialty, and evidence level.</li>
+          <li><strong>Retrieval:</strong> When a user asks a clinical question, the query is embedded and matched against the vector store to find the most relevant document chunks.</li>
+          <li><strong>Augmentation:</strong> Retrieved documents are assembled as context and combined with the user&apos;s query into a structured prompt.</li>
+          <li><strong>Generation:</strong> A language model generates a response grounded in the provided context, ideally citing the source documents for each claim.</li>
+          <li><strong>Output:</strong> The response is returned to the user with source citations and, where appropriate, a confidence level based on evidence quality.</li>
+        </ol>
+        <p>This architecture means that the system&apos;s knowledge can be updated simply by adding or replacing documents in the knowledge base — no model retraining required. For teams building a medical RAG system from scratch, see our <Link href="/guides/build-medical-rag-system">step-by-step build guide</Link>.</p>
 
-        <h3>Architecture Overview</h3>
-        <pre>{`Clinical Query → Embedding Model → Vector Database → Relevant Documents → LLM → Grounded Answer
-                                                                    ↑
-                                                      Medical Knowledge Base
-                                                      (Guidelines, Papers, Protocols)`}</pre>
-
-        <h3>Key Components</h3>
-        <ul>
-          <li><strong>Document Ingestion:</strong> Medical PDFs, clinical guidelines, institutional protocols, and curated reference documents are chunked and embedded</li>
-          <li><strong>Vector Store:</strong> Embeddings stored in databases like Pinecone, Milvus, or FAISS</li>
-          <li><strong>Retrieval:</strong> Semantic search finds the most relevant documents for each query</li>
-          <li><strong>LLM Generation:</strong> The model generates responses conditioned on both the query and retrieved context</li>
-          <li><strong>Citation:</strong> Responses include source references for verification</li>
-        </ul>
+        <h2>Clinical RAG vs General RAG</h2>
+        <p>Clinical RAG is a specialized application of retrieval-augmented generation designed for the unique demands of healthcare information. Key differences from general-purpose RAG include:</p>
+        <table>
+          <thead><tr><th>Aspect</th><th>General RAG</th><th>Clinical RAG</th></tr></thead>
+          <tbody>
+            <tr><td>Source requirements</td><td>Web pages, wikis, general documents</td><td>Clinical guidelines, peer-reviewed literature, drug databases</td></tr>
+            <tr><td>Document complexity</td><td>Simple text and HTML</td><td>PDFs with tables, figures, multi-column layouts, medical notation</td></tr>
+            <tr><td>Citation requirements</td><td>Optional</td><td>Essential — every claim needs a traceable source</td></tr>
+            <tr><td>Safety constraints</td><td>General content filtering</td><td>Refusal behavior, confidence scoring, high-risk claim flagging</td></tr>
+            <tr><td>Knowledge freshness</td><td>Periodic updates acceptable</td><td>Critical — superseded guidelines must be identified and replaced</td></tr>
+            <tr><td>Deployment environment</td><td>Often cloud-hosted</td><td>May require on-premise or institution-controlled infrastructure</td></tr>
+          </tbody>
+        </table>
+        <p>The additional constraints in clinical RAG reflect the higher stakes involved. A hallucinated product recommendation in a retail chatbot is annoying; a fabricated treatment suggestion in a clinical workflow can have serious consequences. This makes source grounding, citation quality, and safety controls central design requirements for any medical RAG system.</p>
 
         <h2>Clinical RAG Use Cases</h2>
-
-        <h3>Medical Information Retrieval</h3>
-        <p>Clinicians and researchers can retrieve relevant guidelines, literature, and protocols based on clinical topics, helping surface information that may inform their professional judgment.</p>
-
-        <h3>Medical Literature Review</h3>
-        <p>Researchers can quickly synthesize findings across thousands of papers for systematic reviews or meta-analyses.</p>
-
-        <h3>Patient Education Materials</h3>
-        <p>Generate patient-friendly explanations based on clinical notes and medical references, subject to clinician review.</p>
-
-        <h3>Pharmacology Research</h3>
-        <p>Query pharmacological information from clinical papers and drug databases to support medication review workflows.</p>
-
-        <h3>Coding and Billing Support</h3>
-        <p>Match clinical documentation to appropriate ICD-10 and CPT codes using guideline-grounded RAG.</p>
-
-        <h2>Challenges in Clinical RAG</h2>
+        <p>Clinical RAG systems are being built for a range of healthcare information workflows:</p>
         <ul>
-          <li><strong>Document quality:</strong> Medical documents require careful parsing (tables, figures, references)</li>
-          <li><strong>Regulatory and governance:</strong> Privacy, security, clinical safety, and jurisdiction-specific healthcare AI requirements</li>
-          <li><strong>Latency:</strong> Clinical workflows require fast responses</li>
-          <li><strong>Evaluation:</strong> Measuring accuracy in high-stakes medical contexts</li>
-          <li><strong>Bias:</strong> Ensuring equitable recommendations across populations</li>
+          <li><strong>Medical information retrieval:</strong> Clinicians and researchers query clinical topics and receive answers grounded in current guidelines and literature, with source citations they can verify.</li>
+          <li><strong>Literature synthesis:</strong> Researchers use RAG to quickly synthesize findings across large document collections, such as systematic reviews or meta-analyses.</li>
+          <li><strong>Patient education materials:</strong> Teams generate patient-friendly explanations based on clinical notes and medical references, subject to clinician review.</li>
+          <li><strong>Pharmacology research support:</strong> Drug information, interactions, and contraindications are retrieved from authoritative sources rather than parametric memory.</li>
+          <li><strong>Coding and billing support:</strong> Clinical documentation is matched to appropriate coding systems (ICD-10, CPT) using guideline-grounded retrieval.</li>
+          <li><strong>Institutional knowledge management:</strong> Hospital-specific protocols, clinical pathways, and policy manuals are made searchable for clinical staff.</li>
         </ul>
+        <p>For a deeper look at the differences between clinical RAG and other healthcare AI approaches, see our guide on <Link href="/guides/clinical-rag-vs-medical-chatbot">Clinical RAG vs Medical Chatbot</Link>.</p>
+
+        <h2>Benefits and Limitations</h2>
+        <h3>Benefits</h3>
+        <ul>
+          <li><strong>Evidence grounding:</strong> Answers are traced back to specific source documents, creating an audit trail that clinicians can verify.</li>
+          <li><strong>Updatable knowledge:</strong> New guidelines and research are added to the knowledge base without retraining any models.</li>
+          <li><strong>Domain specificity:</strong> The knowledge base can be scoped to specific specialties, institutions, or use cases.</li>
+          <li><strong>Privacy options:</strong> Clinical RAG systems can be deployed on-premise with full control over data flow, supporting privacy-conscious workflows.</li>
+          <li><strong>Cost efficiency:</strong> No model training costs. Infrastructure costs are determined by retrieval and generation requirements, not by dataset size.</li>
+        </ul>
+        <h3>Limitations</h3>
+        <ul>
+          <li><strong>Knowledge base quality:</strong> The system is only as good as its knowledge base. Poorly sourced or outdated documents produce unreliable outputs.</li>
+          <li><strong>Document parsing complexity:</strong> Medical PDFs with tables, figures, and multi-column layouts require careful parsing. See our <Link href="/guides/medical-pdf-rag-prepare-clinical-documents">Medical PDF RAG guide</Link>.</li>
+          <li><strong>Hallucination risk not eliminated:</strong> RAG can reduce the risk of unsupported outputs, but does not eliminate it. If retrieved context is incomplete or ambiguous, the model may still generate incorrect responses.</li>
+          <li><strong>Retrieval accuracy matters:</strong> If the wrong documents are retrieved, the generated answer will be grounded in irrelevant information. Retrieval quality testing is essential.</li>
+          <li><strong>Not a clinical decision-making system:</strong> Clinical RAG outputs should be reviewed by qualified healthcare professionals. They are designed to support, not replace, clinical judgment.</li>
+        </ul>
+
+        <h2>Safety and Governance Considerations</h2>
+        <p>Building a clinical RAG system requires attention to safety and governance at every stage:</p>
+        <ul>
+          <li><strong>Regulatory and governance:</strong> Privacy, security, clinical safety, and jurisdiction-specific healthcare AI requirements must be addressed at the institutional level.</li>
+          <li><strong>Input validation:</strong> Queries should be sanitized, and out-of-scope or adversarial prompts should be detected and handled safely.</li>
+          <li><strong>Output safety:</strong> Responses should include appropriate disclaimers, confidence levels, and source citations. High-risk claims should be flagged for review.</li>
+          <li><strong>Knowledge base governance:</strong> Source documents should be verified as authoritative, tracked for updates, and regularly reviewed for outdated or superseded content.</li>
+          <li><strong>Evaluation and monitoring:</strong> Clinical RAG systems should be evaluated systematically before deployment and monitored continuously afterward. See our <Link href="/guides/clinical-rag-evaluation-checklist">Evaluation Checklist</Link> and <Link href="/guides/clinical-rag-safety-checklist">Safety Checklist</Link>.</li>
+        </ul>
+        <p>For teams considering self-hosted deployment, our <Link href="/guides/private-medical-rag-deployment">Private Medical RAG Deployment Guide</Link> covers infrastructure and security considerations for institution-controlled environments.</p>
+
+        <h2>Related Clinical RAG Tools</h2>
+        <p>If you&apos;re evaluating tools to build a medical RAG system, here are some options to explore:</p>
+        <ul>
+          <li><strong><Link href="/tools/ragflow-healthcare">RAGFlow for Healthcare</Link></strong> — Open-source RAG engine with advanced medical document parsing</li>
+          <li><strong><Link href="/tools/dify-medical-rag">Dify for Medical RAG</Link></strong> — Visual RAG pipeline builder for rapid prototyping</li>
+          <li><strong><Link href="/tools/llamaindex-clinical-rag">LlamaIndex for Clinical RAG</Link></strong> — Data framework for complex medical knowledge indexing</li>
+          <li><strong><Link href="/tools/langchain-medical-rag">LangChain for Medical RAG</Link></strong> — Modular framework for custom RAG pipeline composition</li>
+          <li><strong><Link href="/tools/openevidence-overview">OpenEvidence</Link></strong> — AI-powered medical search with peer-reviewed citations</li>
+          <li><strong><Link href="/tools/glass-health-overview">Glass Health</Link></strong> — AI-assisted clinical documentation and information support</li>
+        </ul>
+        <p>For a comprehensive comparison, see our <Link href="/tools/best-clinical-rag-tools">Best Clinical RAG Tools</Link> guide.</p>
 
         <h2>Next Steps</h2>
-        <p>Ready to explore the tools and build your own clinical RAG system?</p>
+        <p>Ready to explore clinical RAG further? Here are suggested next steps:</p>
         <ul>
-          <li>Browse the <Link href="/tools">Tools Directory</Link> for frameworks and platforms</li>
-          <li>Read <Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
-          <li>View the <Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
-        </ul>
-
-        <hr className="my-8 border-gray-200" />
-
-        <h2>Related Resources</h2>
-        <ul>
-          <li><Link href="/tools">Clinical RAG Tools Directory</Link></li>
-          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
-          <li><Link href="/guides/reduce-hallucinations-medical-ai">How to Reduce Hallucinations in Medical AI</Link></li>
-          <li><Link href="/guides/rag-vs-fine-tuning-healthcare">RAG vs Fine-tuning in Healthcare</Link></li>
-          <li><Link href="/guides/private-medical-rag-deployment">Private Medical RAG Deployment</Link></li>
+          <li>Read <Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link> for a step-by-step walkthrough</li>
+          <li>Browse the <Link href="/tools">Clinical RAG Tools Directory</Link> to compare frameworks and platforms</li>
+          <li>Review the <Link href="/guides/clinical-rag-evaluation-checklist">Evaluation Checklist</Link> before deploying your system</li>
+          <li>Use the <Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link> as a starting point for safety-oriented prompt design</li>
         </ul>
       </article>
     </div>
