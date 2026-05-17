@@ -44,7 +44,7 @@ export default function VerifyCitationSupportsAnswer() {
       />
 
       <div className="mb-8">
-        <Link href="/" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Home</Link>
+        <Link href="/implementation-notes" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Implementation Notes</Link>
       </div>
 
       <article className="prose-clinical">

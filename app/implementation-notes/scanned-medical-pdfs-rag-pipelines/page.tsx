@@ -44,7 +44,7 @@ export default function ScannedPDFsBreakRAG() {
       />
 
       <div className="mb-8">
-        <Link href="/" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Home</Link>
+        <Link href="/implementation-notes" className="text-teal-600 hover:text-teal-700 text-sm font-medium">← Back to Implementation Notes</Link>
       </div>
 
       <article className="prose-clinical">
@@ -123,6 +123,7 @@ Ciprofloxacin 500 mg q12h Oral`}</pre>
 
         <h3>5. Flag Low-Confidence OCR Results</h3>
         <p>OCR engines provide confidence scores for each recognized character. Aggregate these scores at the document level and flag documents with low average confidence for manual review. Don&apos;t let low-quality OCR output enter your knowledge base without a warning label.</p>
+        <p className="text-sm text-gray-500 italic mt-4"><strong>Note:</strong> The OCR error rates and improvement figures cited above are based on internal implementation testing and are intended as practical field notes, not a controlled benchmark. Results may vary depending on document quality, OCR engine, and testing conditions.</p>
 
         <h2>Bottom Line</h2>
         <p>Scanned medical PDFs are the weakest link in any clinical RAG pipeline. They introduce OCR errors that silently corrupt retrieval, generate confident wrong answers, and make source verification impossible. The solution is not to ignore them but to treat them as a known risk: identify them early, process them with enhanced OCR, verify critical data manually, and flag low-quality output.</p>

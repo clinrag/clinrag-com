@@ -32,7 +32,7 @@ export default function About() {
         <p>Our team brings hands-on experience in:</p>
         <ul>
           <li><strong>Clinical medicine:</strong> Direct patient care experience in orthopedic medicine and medical education</li>
-          <li><strong>Healthcare knowledge systems:</strong> Building and evaluating clinical decision support tools</li>
+          <li><strong>Healthcare knowledge systems:</strong> Building and evaluating citation-grounded clinical knowledge workflows</li>
           <li><strong>AI engineering:</strong> Deploying RAG pipelines, embedding models, and evaluation frameworks</li>
         </ul>
         <p>We are not a large editorial team or a commercial publisher. We are practitioners writing for other practitioners — sharing what we learn as we build clinical RAG systems.</p>
