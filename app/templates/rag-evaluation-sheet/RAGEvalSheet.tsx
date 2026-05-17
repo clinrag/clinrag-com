@@ -62,15 +62,24 @@ export default function RAGEvaluationSheet() {
         <p className="text-teal-100 mb-6 max-w-lg mx-auto">
           A structured CSV template with 50 rows for testing clinical RAG accuracy, citations, hallucinations, and safety.
         </p>
-        <button
-          onClick={downloadCSV}
-          className="bg-white text-teal-600 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors inline-flex items-center gap-2"
-        >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          Download CSV
-        </button>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <a
+            href="/downloads/clinical-rag-evaluation-sheet.csv"
+            download
+            className="bg-white text-teal-600 px-6 py-3 rounded-lg font-medium hover:bg-teal-50 transition-colors inline-flex items-center gap-2"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download CSV
+          </a>
+          <button
+            onClick={downloadCSV}
+            className="bg-teal-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-800 transition-colors inline-flex items-center gap-2"
+          >
+            Generate Fresh CSV
+          </button>
+        </div>
         <p className="text-teal-200 text-sm mt-4">50 rows with 5 example questions included</p>
       </div>
 
