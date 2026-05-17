@@ -44,8 +44,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/starter-kit" className="hover:text-teal-400 transition-colors">Free Starter Kit</Link></li>
               <li><Link href="/contact" className="hover:text-teal-400 transition-colors">Clinical RAG Weekly</Link></li>
-              <li><Link href="/contact" className="hover:text-teal-400 transition-colors">Contact Us</Link></li>
-              <li><Link href="/contact#sponsor" className="hover:text-teal-400 transition-colors">Sponsor</Link></li>
+              <li><Link href="/sponsor" className="hover:text-teal-400 transition-colors">Sponsor</Link></li>
             </ul>
           </div>
         </div>
@@ -53,7 +52,14 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
           <p>© {new Date().getFullYear()} ClinRAG — All rights reserved.</p>
           <p className="mt-2 text-gray-500">
-            Disclaimer: Content is for informational purposes only and does not constitute medical advice.
+            <Link href="/about" className="hover:text-teal-400 transition-colors">About</Link>
+            {" · "}
+            <Link href="/editorial-policy" className="hover:text-teal-400 transition-colors">Editorial Policy</Link>
+            {" · "}
+            <Link href="/disclaimer" className="hover:text-teal-400 transition-colors">Disclaimer</Link>
+          </p>
+          <p className="mt-2 text-gray-600 text-xs">
+            Content is for informational purposes only and does not constitute medical advice.
           </p>
         </div>
       </div>

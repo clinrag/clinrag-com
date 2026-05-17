@@ -37,6 +37,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/templates/rag-evaluation-sheet", priority: 0.5, changeFreq: "monthly" as const },
     { path: "/contact", priority: 0.4, changeFreq: "yearly" as const },
     { path: "/starter-kit", priority: 0.8, changeFreq: "monthly" as const },
+    { path: "/about", priority: 0.3, changeFreq: "yearly" as const },
+    { path: "/editorial-policy", priority: 0.3, changeFreq: "yearly" as const },
+    { path: "/disclaimer", priority: 0.2, changeFreq: "yearly" as const },
+    { path: "/sponsor", priority: 0.3, changeFreq: "yearly" as const },
   ];
 
   return routes.map((route) => ({
