@@ -138,7 +138,7 @@ export const db = {
       return setJsonFile("guides", guides);
     }
     const sql = await getSql();
-    await sql!`INSERT INTO guides (id, title, desc, slug, content, icon, difficulty, read_time, created_at) VALUES (${guide.id}, ${guide.title}, ${guide.desc}, ${guide.slug}, ${guide.content}, ${guide.icon}, ${guide.difficulty}, ${guide.readTime || ""}, ${guide.created_at})`;
+    await sql!`INSERT INTO guides (id, title, "desc", slug, content, icon, difficulty, read_time, created_at) VALUES (${guide.id}, ${guide.title}, ${guide.desc}, ${guide.slug}, ${guide.content}, ${guide.icon}, ${guide.difficulty}, ${guide.readTime || ""}, ${guide.created_at})`;
   },
 
   updateGuide: async (id: string, guide: Guide) => {
@@ -147,7 +147,7 @@ export const db = {
       return setJsonFile("guides", guides);
     }
     const sql = await getSql();
-    await sql!`UPDATE guides SET title = ${guide.title}, desc = ${guide.desc}, slug = ${guide.slug}, content = ${guide.content}, icon = ${guide.icon}, difficulty = ${guide.difficulty}, read_time = ${guide.readTime || ""}, created_at = ${guide.created_at} WHERE id = ${id}`;
+    await sql!`UPDATE guides SET title = ${guide.title}, "desc" = ${guide.desc}, slug = ${guide.slug}, content = ${guide.content}, icon = ${guide.icon}, difficulty = ${guide.difficulty}, read_time = ${guide.readTime || ""}, created_at = ${guide.created_at} WHERE id = ${id}`;
   },
 
   deleteGuide: async (id: string) => {
@@ -174,7 +174,7 @@ export const db = {
       return setJsonFile("templates", templates);
     }
     const sql = await getSql();
-    await sql!`INSERT INTO templates (id, title, desc, slug, content, type, format, created_at) VALUES (${template.id}, ${template.title}, ${template.desc}, ${template.slug}, ${template.content}, ${template.type}, ${template.format}, ${template.created_at})`;
+    await sql!`INSERT INTO templates (id, title, "desc", slug, content, type, format, created_at) VALUES (${template.id}, ${template.title}, ${template.desc}, ${template.slug}, ${template.content}, ${template.type}, ${template.format}, ${template.created_at})`;
   },
 
   updateTemplate: async (id: string, template: Template) => {
@@ -183,7 +183,7 @@ export const db = {
       return setJsonFile("templates", templates);
     }
     const sql = await getSql();
-    await sql!`UPDATE templates SET title = ${template.title}, desc = ${template.desc}, slug = ${template.slug}, content = ${template.content}, type = ${template.type}, format = ${template.format}, created_at = ${template.created_at} WHERE id = ${id}`;
+    await sql!`UPDATE templates SET title = ${template.title}, "desc" = ${template.desc}, slug = ${template.slug}, content = ${template.content}, type = ${template.type}, format = ${template.format}, created_at = ${template.created_at} WHERE id = ${id}`;
   },
 
   deleteTemplate: async (id: string) => {

@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS tools (
 CREATE TABLE IF NOT EXISTS guides (
   id TEXT PRIMARY KEY,
   title TEXT NOT NULL,
-  desc TEXT,
+  "desc" TEXT,
   slug TEXT UNIQUE,
   content TEXT,
   icon TEXT,
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS guides (
 CREATE TABLE IF NOT EXISTS templates (
   id TEXT PRIMARY KEY,
   title TEXT NOT NULL,
-  desc TEXT,
+  "desc" TEXT,
   slug TEXT UNIQUE,
   content TEXT,
   type TEXT,
