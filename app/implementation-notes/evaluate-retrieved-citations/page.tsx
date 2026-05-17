@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "How to Verify a Retrieved Citation Actually Supports the Answer — Implementation Notes",
   description: "A practical approach to evaluating whether RAG citations are accurate, relevant, and sufficient — not just present.",
   alternates: {
-    canonical: "https://www.clinrag.com/implementation-notes/verify-citation-supports-answer",
+    canonical: "https://www.clinrag.com/implementation-notes/evaluate-retrieved-citations",
   },
 };
 
@@ -146,7 +146,7 @@ Note: Review ACC 2024 for patient-specific exceptions.`}</pre>
           <li><Link href="/guides/citation-grounding-medical-rag">Citation Grounding in Medical RAG</Link></li>
           <li><Link href="/guides/clinical-rag-evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
           <li><Link href="/guides/evaluate-medical-rag-answers">How to Evaluate Medical RAG Answers</Link></li>
-          <li><Link href="/implementation-notes/medical-pdf-rag-lessons">What I Learned Building a Medical PDF RAG Workflow</Link></li>
+          <li><Link href="/implementation-notes/building-medical-pdf-rag-workflow">What I Learned Building a Medical PDF RAG Workflow</Link></li>
           <li><Link href="/guides/clinical-rag-safety-checklist">Clinical RAG Safety Checklist</Link></li>
         </ul>
       </article>

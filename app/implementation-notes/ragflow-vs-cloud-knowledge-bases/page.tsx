@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "RAGFlow vs Cloud Knowledge Bases for Medical Documents — Implementation Notes",
   description: "A practical comparison of self-hosted RAGFlow versus cloud knowledge base services for handling clinical documents — when each makes sense.",
   alternates: {
-    canonical: "https://www.clinrag.com/implementation-notes/ragflow-vs-cloud-kb",
+    canonical: "https://www.clinrag.com/implementation-notes/ragflow-vs-cloud-knowledge-bases",
   },
 };
 

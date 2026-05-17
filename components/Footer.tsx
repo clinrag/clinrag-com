@@ -30,12 +30,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-3">Tools</h3>
+            <h3 className="text-white font-semibold mb-3">Resources</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/tools/ragflow-healthcare" className="hover:text-teal-400 transition-colors">RAGFlow for Healthcare</Link></li>
-              <li><Link href="/tools/dify-medical-rag" className="hover:text-teal-400 transition-colors">Dify for Medical RAG</Link></li>
-              <li><Link href="/tools/llamaindex-clinical-rag" className="hover:text-teal-400 transition-colors">LlamaIndex for Clinical RAG</Link></li>
-              <li><Link href="/tools/langchain-medical-rag" className="hover:text-teal-400 transition-colors">LangChain for Medical RAG</Link></li>
+              <li><Link href="/guides" className="hover:text-teal-400 transition-colors">Guides</Link></li>
+              <li><Link href="/tools" className="hover:text-teal-400 transition-colors">Tools Directory</Link></li>
+              <li><Link href="/templates" className="hover:text-teal-400 transition-colors">Templates</Link></li>
+              <li><Link href="/implementation-notes" className="hover:text-teal-400 transition-colors">Implementation Notes</Link></li>
             </ul>
           </div>
 

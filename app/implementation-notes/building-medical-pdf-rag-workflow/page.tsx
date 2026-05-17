@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "What I Learned Building a Medical PDF RAG Workflow — Implementation Notes",
   description: "Real-world lessons from building a clinical RAG system that ingests medical PDFs — what went wrong, what worked, and what I would do differently.",
   alternates: {
-    canonical: "https://www.clinrag.com/implementation-notes/medical-pdf-rag-lessons",
+    canonical: "https://www.clinrag.com/implementation-notes/building-medical-pdf-rag-workflow",
   },
 };
 
@@ -18,7 +18,7 @@ const articleJsonLd = {
   publisher: { "@type": "Organization", name: "ClinRAG" },
   datePublished: "2026-05-15",
   dateModified: "2026-05-15",
-  mainEntityOfPage: "https://www.clinrag.com/implementation-notes/medical-pdf-rag-lessons",
+  mainEntityOfPage: "https://www.clinrag.com/implementation-notes/building-medical-pdf-rag-workflow",
 };
 
 const breadcrumbJsonLd = {
@@ -27,7 +27,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.clinrag.com" },
     { "@type": "ListItem", position: 2, name: "Implementation Notes", item: "https://www.clinrag.com/implementation-notes" },
-    { "@type": "ListItem", position: 3, name: "Medical PDF RAG Lessons", item: "https://www.clinrag.com/implementation-notes/medical-pdf-rag-lessons" },
+    { "@type": "ListItem", position: 3, name: "Building a Medical PDF RAG Workflow", item: "https://www.clinrag.com/implementation-notes/building-medical-pdf-rag-workflow" },
   ],
 };
 
@@ -105,7 +105,7 @@ export default function MedicalPDFRAGLessons() {
         <ul>
           <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
           <li><Link href="/guides/medical-pdf-rag-prepare-clinical-documents">Medical PDF RAG: How to Prepare Clinical Documents</Link></li>
-          <li><Link href="/implementation-notes/scanned-pdfs-break-rag">Why Scanned Medical PDFs Break RAG Pipelines</Link></li>
+          <li><Link href="/implementation-notes/scanned-medical-pdfs-rag-pipelines">Why Scanned Medical PDFs Break RAG Pipelines</Link></li>
           <li><Link href="/tools/ragflow-healthcare">RAGFlow for Healthcare</Link></li>
           <li><Link href="/guides/clinical-rag-evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
         </ul>

@@ -116,6 +116,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Implementation Notes */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">Implementation Notes</h2>
+            <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+              Practical lessons from real-world clinical RAG workflows, document preparation, and retrieval evaluation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { title: "What I Learned from Building a Medical PDF RAG Workflow", desc: "Real-world lessons from ingesting medical PDFs into a RAG pipeline", href: "/implementation-notes/building-medical-pdf-rag-workflow" },
+              { title: "Why Scanned Medical PDFs Break Many RAG Pipelines", desc: "OCR errors in medical documents and what to do about it", href: "/implementation-notes/scanned-medical-pdfs-rag-pipelines" },
+              { title: "How to Evaluate Whether a Retrieved Citation Supports the Answer", desc: "A framework for verifying citation accuracy in clinical RAG", href: "/implementation-notes/evaluate-retrieved-citations" },
+            ].map((note) => (
+              <Link
+                key={note.href}
+                href={note.href}
+                className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-teal-200 hover:bg-teal-50 transition-all group"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">{note.title}</h3>
+                <p className="mt-2 text-gray-500 text-sm">{note.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/implementation-notes" className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium">
+              View All Implementation Notes →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Tools Directory */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

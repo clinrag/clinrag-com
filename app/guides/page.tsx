@@ -79,6 +79,42 @@ export default function GuidesIndex() {
           </div>
         </section>
       ))}
+
+      {/* Implementation Notes */}
+      <section className="mb-12">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">Implementation Notes</h2>
+            <p className="text-gray-500 mt-1">Field notes and practical lessons from real clinical RAG workflows.</p>
+          </div>
+          <Link href="/implementation-notes" className="text-teal-600 hover:text-teal-700 text-sm font-medium whitespace-nowrap">
+            View All →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: "What I Learned from Building a Medical PDF RAG Workflow", desc: "Real-world lessons from ingesting medical PDFs into a RAG pipeline", href: "/implementation-notes/building-medical-pdf-rag-workflow", icon: "🔧", difficulty: "Intermediate", readTime: "10 min" },
+            { title: "Why Scanned Medical PDFs Break Many RAG Pipelines", desc: "OCR errors in medical documents and what to do about it", href: "/implementation-notes/scanned-medical-pdfs-rag-pipelines", icon: "⚠️", difficulty: "Advanced", readTime: "12 min" },
+            { title: "RAGFlow vs Cloud Knowledge Bases for Medical Documents", desc: "Self-hosted vs cloud KB comparison for clinical use cases", href: "/implementation-notes/ragflow-vs-cloud-knowledge-bases", icon: "⚖️", difficulty: "Intermediate", readTime: "10 min" },
+            { title: "How to Evaluate Whether a Retrieved Citation Supports the Answer", desc: "A framework for verifying citation accuracy in clinical RAG", href: "/implementation-notes/evaluate-retrieved-citations", icon: "🔍", difficulty: "Advanced", readTime: "12 min" },
+            { title: "Why Clinical RAG Needs Safety Checklists, Not Just Better Prompts", desc: "Systematic safety verification beyond prompt engineering", href: "/implementation-notes/clinical-rag-needs-safety-checklists", icon: "🛡️", difficulty: "Intermediate", readTime: "12 min" },
+          ].map((note) => (
+            <Link
+              key={note.href}
+              href={note.href}
+              className="bg-white rounded-xl p-6 border border-gray-200 hover:border-teal-300 hover:shadow-lg transition-all group"
+            >
+              <div className="text-3xl mb-4">{note.icon}</div>
+              <div className="flex gap-2 mb-3">
+                <span className="text-xs bg-teal-50 text-teal-700 px-2.5 py-1 rounded">Notes</span>
+                <span className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded">{note.readTime}</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">{note.title}</h3>
+              <p className="mt-2 text-gray-500 text-sm">{note.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

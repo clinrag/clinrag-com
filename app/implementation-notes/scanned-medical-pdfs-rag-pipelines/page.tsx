@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Why Scanned Medical PDFs Break RAG Pipelines — Implementation Notes",
   description: "A deep dive into why OCR-dependent medical documents cause RAG failures and what to do about it.",
   alternates: {
-    canonical: "https://www.clinrag.com/implementation-notes/scanned-pdfs-break-rag",
+    canonical: "https://www.clinrag.com/implementation-notes/scanned-medical-pdfs-rag-pipelines",
   },
 };
 
@@ -133,7 +133,7 @@ Ciprofloxacin 500 mg q12h Oral`}</pre>
 
         <h2>Related Resources</h2>
         <ul>
-          <li><Link href="/implementation-notes/medical-pdf-rag-lessons">What I Learned Building a Medical PDF RAG Workflow</Link></li>
+          <li><Link href="/implementation-notes/building-medical-pdf-rag-workflow">What I Learned Building a Medical PDF RAG Workflow</Link></li>
           <li><Link href="/guides/medical-pdf-rag-prepare-clinical-documents">Medical PDF RAG: How to Prepare Clinical Documents</Link></li>
           <li><Link href="/templates/pdf-checklist">Medical PDF Preparation Checklist</Link></li>
           <li><Link href="/tools/ragflow-healthcare">RAGFlow for Healthcare</Link></li>

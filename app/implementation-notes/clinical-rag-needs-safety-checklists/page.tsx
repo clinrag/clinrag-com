@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Why Clinical RAG Needs Safety Checklists, Not Just Better Prompts — Implementation Notes",
   description: "Prompt engineering alone is insufficient for clinical RAG safety. Here's why systematic safety checklists are essential and how to implement them.",
   alternates: {
-    canonical: "https://www.clinrag.com/implementation-notes/safety-checklists-vs-prompts",
+    canonical: "https://www.clinrag.com/implementation-notes/clinical-rag-needs-safety-checklists",
   },
 };
 
@@ -128,7 +128,7 @@ export default function SafetyChecklistsVsPrompts() {
         <ul>
           <li><Link href="/guides/clinical-rag-safety-checklist">Clinical RAG Safety Checklist</Link></li>
           <li><Link href="/guides/citation-grounding-medical-rag">Citation Grounding in Medical RAG</Link></li>
-          <li><Link href="/implementation-notes/verify-citation-supports-answer">How to Verify a Retrieved Citation Actually Supports the Answer</Link></li>
+          <li><Link href="/implementation-notes/evaluate-retrieved-citations">How to Verify a Retrieved Citation Actually Supports the Answer</Link></li>
           <li><Link href="/guides/clinical-rag-evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
           <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
         </ul>

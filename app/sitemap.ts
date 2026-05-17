@@ -41,11 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/editorial-policy", priority: 0.3, changeFreq: "yearly" as const },
     { path: "/disclaimer", priority: 0.2, changeFreq: "yearly" as const },
     { path: "/sponsor", priority: 0.3, changeFreq: "yearly" as const },
-    { path: "/implementation-notes/medical-pdf-rag-lessons", priority: 0.6, changeFreq: "monthly" as const },
-    { path: "/implementation-notes/scanned-pdfs-break-rag", priority: 0.6, changeFreq: "monthly" as const },
-    { path: "/implementation-notes/ragflow-vs-cloud-kb", priority: 0.6, changeFreq: "monthly" as const },
-    { path: "/implementation-notes/verify-citation-supports-answer", priority: 0.6, changeFreq: "monthly" as const },
-    { path: "/implementation-notes/safety-checklists-vs-prompts", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/implementation-notes", priority: 0.7, changeFreq: "monthly" as const },
+    { path: "/implementation-notes/building-medical-pdf-rag-workflow", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/implementation-notes/scanned-medical-pdfs-rag-pipelines", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/implementation-notes/ragflow-vs-cloud-knowledge-bases", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/implementation-notes/evaluate-retrieved-citations", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/implementation-notes/clinical-rag-needs-safety-checklists", priority: 0.6, changeFreq: "monthly" as const },
   ];
 
   return routes.map((route) => ({
