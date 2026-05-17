@@ -207,6 +207,18 @@ export default function WhatIsClinicalRAG() {
           <li>Review the <Link href="/guides/clinical-rag-evaluation-checklist">Evaluation Checklist</Link> before deploying your system</li>
           <li>Use the <Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link> as a starting point for safety-oriented prompt design</li>
         </ul>
+
+        <div className="not-prose bg-teal-50 rounded-xl p-6 border border-teal-200 mt-8">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">Start Your Clinical RAG Journey</h3>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/guides/clinical-rag-evaluation-checklist" className="inline-flex items-center bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition-colors">
+              Start with the Evaluation Checklist →
+            </Link>
+            <Link href="/tools" className="inline-flex items-center bg-white text-teal-600 px-4 py-2 rounded-lg text-sm font-medium border border-teal-200 hover:bg-teal-50 transition-colors">
+              Explore Clinical RAG Tools →
+            </Link>
+          </div>
+        </div>
       </article>
     </div>
   );
