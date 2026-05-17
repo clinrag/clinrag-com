@@ -104,7 +104,7 @@ export default function WhatIsClinicalRAG() {
       </div>
 
       <article className="prose-clinical">
-        <h1>What Is Clinical RAG?</h1>
+        <h1>What Is Clinical RAG? Clinical Retrieval-Augmented Generation Explained</h1>
 
         <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
           <span><strong>Author:</strong> ClinRAG Editorial Team</span>

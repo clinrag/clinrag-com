@@ -156,7 +156,7 @@ export default function RAGFlowHealthcare() {
 │  │  (Browser)  │      via HTTPS          │
 │  └─────────────┘                          │
 └───────────────────────────────────────────┘`}</pre>
-        <p>This architecture keeps all processing — document parsing, embedding, retrieval, and generation — within a single controlled environment. It requires no external API calls and can be hosted on a single server with a GPU.</p>
+        <p>This architecture can be configured to avoid external API calls when local embedding models and local LLM serving are used. It keeps all processing — document parsing, embedding, retrieval, and generation — within a single controlled environment.</p>
 
         <h2>Getting Started</h2>
         <ol>

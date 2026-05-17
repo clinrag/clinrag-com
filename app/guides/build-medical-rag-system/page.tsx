@@ -183,6 +183,33 @@ Confidence: [HIGH/MEDIUM/LOW]`}</pre>
         </ul>
         <p>For a comprehensive safety checklist covering all these areas, see our <Link href="/guides/clinical-rag-safety-checklist">Clinical RAG Safety Checklist</Link>.</p>
 
+        <h2>Suggested Architecture</h2>
+        <p>A typical clinical RAG pipeline follows this flow:</p>
+        <div className="not-prose overflow-x-auto my-6">
+          <div className="flex items-center gap-2 min-w-max text-sm text-gray-700">
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">Documents</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">OCR / Parsing</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">Chunking</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">Embeddings</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">Vector Store</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">Retrieval</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">Reranking</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">LLM</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 whitespace-nowrap">Citation-Grounded Answer</div>
+            <svg className="w-4 h-4 text-teal-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+            <div className="bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 whitespace-nowrap">Human Review</div>
+          </div>
+        </div>
+        <p className="text-sm text-gray-500">Each step in this pipeline introduces quality considerations. Weaknesses at the document ingestion stage (parsing, chunking) propagate through the entire pipeline and cannot be fully recovered by downstream components.</p>
+
         <hr className="my-8 border-gray-200" />
 
         <h2>Next Steps</h2>
