@@ -85,6 +85,24 @@ export default function GlassHealthOverview() {
           <li>AI outputs should always be reviewed by a licensed clinician</li>
           <li>Not a substitute for clinical judgment or professional medical advice</li>
         </ul>
+
+        <p><strong>Disclaimer:</strong> Glass Health is an information retrieval and documentation support tool and should not be used as a substitute for professional medical judgment.</p>
+
+        <hr className="my-8 border-gray-200" />
+
+        <h2>Alternatives</h2>
+        <ul>
+          <li><Link href="/tools/openevidence-overview">OpenEvidence Overview</Link> — Evidence-grounded clinical search</li>
+          <li><Link href="/tools/clinicalkey-ai-overview">ClinicalKey AI Overview</Link> — Elsevier&apos;s clinical content library</li>
+          <li><Link href="/tools/open-source-medical-rag-tools">Open-Source Medical RAG Tools</Link> — Self-hosted alternatives</li>
+        </ul>
+
+        <h2>Related Resources</h2>
+        <ul>
+          <li><Link href="/tools/best-clinical-rag-tools">Best Clinical RAG Tools Comparison</Link></li>
+          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
+          <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
+        </ul>
       </article>
     </div>
   );

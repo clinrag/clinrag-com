@@ -170,6 +170,14 @@ export default function LlamaIndexClinicalRAG() {
 
         <hr className="my-8 border-gray-200" />
 
+        <h2>Alternatives</h2>
+        <ul>
+          <li><Link href="/tools/ragflow-healthcare">RAGFlow for Healthcare</Link> — Advanced PDF parsing</li>
+          <li><Link href="/tools/dify-medical-rag">Dify for Medical RAG</Link> — Visual workflow builder</li>
+          <li><Link href="/tools/langchain-medical-rag">LangChain for Medical RAG</Link> — Modular pipeline composition</li>
+          <li><Link href="/tools/best-clinical-rag-tools">Best Clinical RAG Tools Comparison</Link></li>
+        </ul>
+
         <h2>Related Resources</h2>
         <ul>
           <li><Link href="/tools/open-source-medical-rag-tools">Open-Source Medical RAG Tools</Link></li>

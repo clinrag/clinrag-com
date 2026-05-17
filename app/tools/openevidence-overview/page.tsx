@@ -88,6 +88,24 @@ export default function OpenEvidenceOverview() {
           <li>Curated literature scope may not cover rare conditions or emerging research</li>
           <li>Information should be verified by qualified healthcare professionals</li>
         </ul>
+
+        <p><strong>Disclaimer:</strong> OpenEvidence is an information retrieval tool and should not be used as a substitute for professional medical judgment. All outputs should be verified against current clinical guidelines.</p>
+
+        <hr className="my-8 border-gray-200" />
+
+        <h2>Alternatives</h2>
+        <ul>
+          <li><Link href="/tools/glass-health-overview">Glass Health Overview</Link> — AI-assisted clinical documentation</li>
+          <li><Link href="/tools/clinicalkey-ai-overview">ClinicalKey AI Overview</Link> — Elsevier&apos;s clinical content library</li>
+          <li><Link href="/tools/open-source-medical-rag-tools">Open-Source Medical RAG Tools</Link> — Self-hosted alternatives</li>
+        </ul>
+
+        <h2>Related Resources</h2>
+        <ul>
+          <li><Link href="/tools/best-clinical-rag-tools">Best Clinical RAG Tools Comparison</Link></li>
+          <li><Link href="/what-is-clinical-rag">What Is Clinical RAG?</Link></li>
+          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
+        </ul>
       </article>
     </div>
   );

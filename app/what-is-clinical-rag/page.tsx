@@ -36,6 +36,53 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is Clinical RAG?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Clinical RAG (Retrieval-Augmented Generation) is an architecture for healthcare knowledge retrieval that combines document search with language model generation. Instead of relying on a model's internal training data, a clinical RAG system retrieves relevant information from a curated knowledge base — clinical guidelines, research literature, institutional protocols, drug databases — and uses that information to generate answers grounded in authoritative sources.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Clinical RAG differ from a medical chatbot?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Clinical RAG retrieves answers from curated medical knowledge bases with traceable citations, while medical chatbots typically rely on the model's internal training data. Clinical RAG provides source-grounded, verifiable answers with citation trails; chatbots generate responses from parametric memory without source attribution. Clinical RAG is better suited for clinical workflows where evidence traceability is essential.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Clinical RAG HIPAA compliant?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Clinical RAG systems can be designed to support HIPAA-aligned workflows when deployed with appropriate safeguards — on-premise infrastructure, encrypted data storage, access controls, and audit logging. The architecture itself does not guarantee compliance; the deployment configuration and governance processes determine whether a clinical RAG system meets regulatory requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Clinical RAG replace clinical judgment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Clinical RAG systems are designed for information retrieval and clinician review support — not as diagnostic or treatment decision-making systems. Outputs should always be verified by qualified healthcare professionals against current clinical guidelines and institutional protocols. The system provides evidence-grounded information to support professional judgment, not replace it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the best tools for building Clinical RAG systems?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The best tool depends on your requirements. For advanced medical PDF parsing, RAGFlow is recommended. For quick prototyping with visual workflows, Dify is ideal. For complex knowledge graphs and multi-hop reasoning, LlamaIndex excels. For maximum flexibility and community support, LangChain is the most versatile. For managed clinical search solutions, OpenEvidence and ClinicalKey AI provide peer-reviewed, citation-grounded answers.",
+      },
+    },
+  ],
+};
+
 export default function WhatIsClinicalRAG() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -46,6 +93,10 @@ export default function WhatIsClinicalRAG() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="mb-8">
