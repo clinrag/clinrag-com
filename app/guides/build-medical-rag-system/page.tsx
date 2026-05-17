@@ -221,11 +221,24 @@ Confidence: [HIGH/MEDIUM/LOW]`}</pre>
         <h2>Related Resources</h2>
         <ul>
           <li><Link href="/what-is-clinical-rag">What Is Clinical RAG?</Link></li>
-          <li><Link href="/guides/medical-pdf-rag-prepare-clinical-documents">Medical PDF RAG: How to Prepare Clinical Documents</Link></li>
-          <li><Link href="/guides/citation-grounding-medical-rag">Citation Grounding in Medical RAG</Link></li>
+          <li><Link href="/guides/build-medical-rag-system">How to Build a Medical RAG System</Link></li>
           <li><Link href="/guides/clinical-rag-evaluation-checklist">Clinical RAG Evaluation Checklist</Link></li>
-          <li><Link href="/templates/rag-prompt">Clinical RAG Prompt Template</Link></li>
+          <li><Link href="/tools/best-clinical-rag-tools">Best Clinical RAG Tools</Link></li>
+          <li><Link href="/tools/ragflow-healthcare">RAGFlow for Healthcare</Link></li>
         </ul>
+
+        <div className="not-prose bg-teal-50 rounded-xl p-6 border border-teal-200 mt-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Build Safer Clinical RAG Workflows</h3>
+          <p className="text-gray-600 text-sm mb-4">Use the Clinical RAG Readiness Checker or download the RAG Evaluation Sheet to plan your next implementation.</p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/tools/clinical-rag-readiness-checker" className="inline-flex items-center bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-700 transition-colors">
+              Use the Readiness Checker →
+            </Link>
+            <Link href="/templates/rag-evaluation-sheet" className="inline-flex items-center bg-white text-teal-600 px-4 py-2 rounded-lg text-sm font-medium border border-teal-200 hover:bg-teal-50 transition-colors">
+              Download Evaluation Sheet →
+            </Link>
+          </div>
+        </div>
       </article>
     </div>
   );
