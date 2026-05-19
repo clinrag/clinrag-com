@@ -61,7 +61,7 @@ export default function OpenSourceMedicalRagTools() {
         <h2>Why Open Source for Medical RAG?</h2>
         <p>Open-source tools offer several advantages for healthcare RAG deployments:</p>
         <ul>
-          <li><strong>Full data control:</strong> When you self-host an open-source RAG system, sensitive medical data can be kept within institution-controlled infrastructure when the system is configured without external API calls to third-party LLM providers or cloud services.</li>
+          <li><strong>Full data control:</strong> When you self-host an open-source RAG system, sensitive medical data can be kept within institution-controlled infrastructure when the system is configured to avoid external API calls to third-party LLM providers or cloud services.</li>
           <li><strong>Customization for clinical workflows:</strong> Open-source code can be modified to meet specific institutional requirements, such as integration with existing clinical systems, custom document parsers, or specialized evaluation pipelines.</li>
           <li><strong>Community-driven improvements:</strong> Active open-source communities continuously improve security, performance, and feature sets. Bug fixes and new capabilities are available to all users without vendor lock-in.</li>
           <li><strong>Cost transparency:</strong> Open-source tools have no licensing fees. The total cost of ownership is determined by your infrastructure and maintenance resources, not by per-seat or per-query pricing models.</li>

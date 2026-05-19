@@ -132,7 +132,7 @@ docker run -d --name milvus \
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_community.vectorstores import FAISS
 
-# All local, no external API calls
+# All local, can be configured to avoid external API calls
 llm = Ollama(model="llama3:8b", temperature=0.1)
 embeddings = OllamaEmbeddings(model="nomic-embed-text")
 

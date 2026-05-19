@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "What Is Clinical RAG? Clinical Retrieval-Augmented Generation Explained",
+  title: "Clinical RAG: Retrieval-Augmented Generation for Healthcare Explained",
   description: "Learn what Clinical RAG is, how retrieval-augmented generation supports healthcare knowledge retrieval, and why citation-grounded AI matters in medical workflows.",
   alternates: {
     canonical: "https://www.clinrag.com/what-is-clinical-rag",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "What Is Clinical RAG? Clinical Retrieval-Augmented Generation Explained",
+  headline: "Clinical RAG: Retrieval-Augmented Generation for Healthcare Explained",
   description: "An overview of Retrieval-Augmented Generation (RAG) in healthcare and clinical applications.",
   author: {
     "@type": "Organization",
@@ -104,7 +104,7 @@ export default function WhatIsClinicalRAG() {
       </div>
 
       <article className="prose-clinical">
-        <h1>What Is Clinical RAG? Clinical Retrieval-Augmented Generation Explained</h1>
+        <h1>Clinical RAG: Retrieval-Augmented Generation for Healthcare Explained</h1>
 
         <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-8 pb-6 border-b border-gray-200">
           <span><strong>Author:</strong> ClinRAG Editorial Team</span>

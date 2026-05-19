@@ -59,7 +59,7 @@ export default function RAGFlowVsCloudKB() {
         <p className="text-xl text-gray-500 mb-8">When building a clinical RAG system, one of the first architectural decisions is whether to self-host your knowledge base (e.g., RAGFlow) or use a cloud-managed service. For medical documents, this choice has implications that go beyond cost and convenience. Here is our hands-on comparison.</p>
 
         <h2>The Core Tradeoff: Control vs. Convenience</h2>
-        <p>This is the fundamental tension. Cloud knowledge base services (Pinecone, Weaviate Cloud, OpenAI&apos;s Assistants API) offer convenience: zero infrastructure management, automatic scaling, and polished APIs. Self-hosted solutions (RAGFlow, Milvus, FAISS) offer control: full data ownership, no external API calls, and the ability to customize every layer of the pipeline.</p>
+        <p>This is the fundamental tension. Cloud knowledge base services (Pinecone, Weaviate Cloud, OpenAI&apos;s Assistants API) offer convenience: zero infrastructure management, automatic scaling, and polished APIs. Self-hosted solutions (RAGFlow, Milvus, FAISS) offer control: full data ownership, the ability to avoid external API calls when configured with local models, and the ability to customize every layer of the pipeline.</p>
         <p>For medical documents, the &quot;control&quot; side of this equation is weighted more heavily than in general-purpose applications. Here&apos;s why.</p>
 
         <h2>Document Parsing: Where RAGFlow Has a Clear Advantage</h2>
