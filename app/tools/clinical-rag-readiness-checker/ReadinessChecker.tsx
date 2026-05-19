@@ -342,6 +342,7 @@ export default function ReadinessChecker() {
       )}
 
       <p className="text-sm text-gray-400 mt-12 text-center">This tool provides general guidance only. Consult your institution&apos;s clinical governance and IT security teams for project-specific recommendations.</p>
+      <p className="text-sm text-gray-400 mt-2 text-center">For a non-interactive alternative, see the <Link href="/guides/clinical-rag-evaluation-checklist" className="text-teal-600 hover:text-teal-700">Clinical RAG Evaluation Checklist</Link>.</p>
     </div>
   );
 }

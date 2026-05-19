@@ -176,7 +176,7 @@ export default function EvaluationChecklist() {
         </div>
 
         <h2>How to Use This Checklist</h2>
-        <p>Work through each of the nine assessment dimensions below. For every item, mark whether your system <strong>passes</strong> (✓), <strong>needs improvement</strong> (△), or <strong>fails</strong> (✗). A system ready for clinical deployment should pass at least 80% of items across all dimensions, with no failures in the Safety or Unsupported Claims categories.</p>
+        <p>Work through each of the nine assessment dimensions below. For every item, mark whether your system <strong>passes</strong> (✓), <strong>needs improvement</strong> (△), or <strong>fails</strong> (✗). As an internal readiness benchmark, teams may choose to require a high pass rate across checklist items and no unresolved failures in safety-critical categories. Thresholds should be adapted to the specific use case, risk level, and institutional governance requirements.</p>
         <p>For a structured approach to testing, create a test set of 50-100 clinical questions covering common queries, edge cases, and adversarial inputs. See our <Link href="/guides/evaluate-medical-rag-answers">guide on evaluating medical RAG answers</Link> for details on building an effective test set.</p>
 
         {checklistItems.map((section) => (

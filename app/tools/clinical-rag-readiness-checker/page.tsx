@@ -10,5 +10,14 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ReadinessChecker />;
+  return (
+    <>
+      <ReadinessChecker />
+      <noscript>
+        <div className="max-w-3xl mx-auto px-4 py-8 text-center">
+          <p className="text-gray-600">This interactive checker requires JavaScript. You can also use the <a href="/guides/clinical-rag-evaluation-checklist" className="text-teal-600 underline">Clinical RAG Evaluation Checklist</a> as a static alternative.</p>
+        </div>
+      </noscript>
+    </>
+  );
 }
