@@ -72,3 +72,17 @@ body {
 .prose-clinical th {
   @apply bg-gray-50 font-semibold;
 }
+
+.brand-header {
+  background: linear-gradient(to right, #111827 57%, #0d9488 57%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-footer {
+  background: linear-gradient(to right, #ffffff 57%, #2dd4bf 57%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
